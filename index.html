@@ -10,7 +10,7 @@
 
 <meta name="theme-color" content="#17251d">
 
-<title>Maquillajes y Colores | Parfüm und Düfte Perez</title>
+<title>Make-up und Farben | Parfüm und Düfte Perez</title>
 
 <style>
 
@@ -502,7 +502,7 @@ footer strong {color:var(--gold)}
 
     <select id="language" aria-label="Sprache wählen">
 
-      <option value="de">Deutsch</option>
+      <option value="de" selected>Deutsch</option>
 
       <option value="es">Español</option>
 
@@ -528,23 +528,17 @@ footer strong {color:var(--gold)}
 
   <p>PARFÜM UND DÜFTE PEREZ</p>
 
-  <h1>MAQUILLAJES Y COLORES</h1>
+  <h1>MAKE-UP UND FARBEN</h1>
 
-  <p id="headerSubtitle">Belleza · Color · Elegancia</p>
+  <p id="headerSubtitle"></p>
 
 </header>
 
 <section class="intro">
 
-  <h2 id="introTitle">Descubre el mundo del maquillaje</h2>
+  <h2 id="introTitle"></h2>
 
-  <p id="introText">
-
-    Una selección de maquillaje para expresar tu personalidad.
-
-    Descubre nuestras colecciones y encuentra tus favoritos.
-
-  </p>
+  <p id="introText"></p>
 
 </section>
 
@@ -552,9 +546,9 @@ footer strong {color:var(--gold)}
 
 <section class="collection">
 
-  <h2 class="collection-title">Máscaras de pestañas</h2>
+  <h2 class="collection-title" data-i18n="mascaraTitle"></h2>
 
-  <p class="collection-subtitle">MIRADAS QUE ENAMORAN</p>
+  <p class="collection-subtitle" data-i18n="mascaraSub"></p>
 
   <div class="video-frame">
 
@@ -568,7 +562,7 @@ footer strong {color:var(--gold)}
 
   <div class="action">
 
-    <button class="btn" onclick="openGallery('mascaras')" data-i18n="viewProducts">VER PRODUCTO</button>
+    <button class="btn" onclick="openGallery('mascaras')" data-i18n="viewProducts"></button>
 
   </div>
 
@@ -578,9 +572,9 @@ footer strong {color:var(--gold)}
 
 <section class="collection">
 
-  <h2 class="collection-title">Extra EyeStay</h2>
+  <h2 class="collection-title" data-i18n="eyeTitle"></h2>
 
-  <p class="collection-subtitle">8 COLORES · TU MIRADA, TU ESTILO</p>
+  <p class="collection-subtitle" data-i18n="eyeSub"></p>
 
   <div class="video-frame">
 
@@ -594,7 +588,7 @@ footer strong {color:var(--gold)}
 
   <div class="action">
 
-    <button class="btn" onclick="openGallery('eyestay')" data-i18n="viewProducts">VER PRODUCTO</button>
+    <button class="btn" onclick="openGallery('eyestay')" data-i18n="viewProducts"></button>
 
   </div>
 
@@ -604,9 +598,9 @@ footer strong {color:var(--gold)}
 
 <section class="collection">
 
-  <h2 class="collection-title">Sombras de ojos en polvo prensado</h2>
+  <h2 class="collection-title" data-i18n="shadowTitle"></h2>
 
-  <p class="collection-subtitle">26 TONOS · TRES COLECCIONES</p>
+  <p class="collection-subtitle" data-i18n="shadowSub"></p>
 
   <div class="video-frame">
 
@@ -620,11 +614,11 @@ footer strong {color:var(--gold)}
 
   <div class="shadow-buttons">
 
-    <button class="btn" onclick="openGallery('sombras1')">COLECCIÓN 1 · 6 TONOS</button>
+    <button class="btn" onclick="openGallery('sombras1')" data-i18n="shadow1"></button>
 
-    <button class="btn" onclick="openGallery('sombras2')">COLECCIÓN 2 · 10 TONOS</button>
+    <button class="btn" onclick="openGallery('sombras2')" data-i18n="shadow2"></button>
 
-    <button class="btn" onclick="openGallery('sombras3')">COLECCIÓN 3 · 10 TONOS</button>
+    <button class="btn" onclick="openGallery('sombras3')" data-i18n="shadow3"></button>
 
   </div>
 
@@ -634,9 +628,9 @@ footer strong {color:var(--gold)}
 
   <strong>PARFÜM UND DÜFTE PEREZ</strong>
 
-  <br>Maquillajes y Colores
+  <br><span id="footerBrand">Make-up und Farben</span>
 
-  <br><span id="footerText">Pedidos y consultas por WhatsApp</span>
+  <br><span id="footerText"></span>
 
   <a class="btn btn-whatsapp"
 
@@ -644,11 +638,7 @@ footer strong {color:var(--gold)}
 
      target="_blank" rel="noopener"
 
-     data-i18n="whatsapp">
-
-    PEDIR POR WHATSAPP
-
-  </a>
+     data-i18n="whatsapp"></a>
 
   <br><br>
 
@@ -660,13 +650,13 @@ footer strong {color:var(--gold)}
 
   <div class="modal-content">
 
-    <button class="close" onclick="closeGallery()" aria-label="Cerrar">×</button>
+    <button class="close" onclick="closeGallery()" aria-label="Schließen">×</button>
 
     <h2 class="modal-title" id="galleryTitle"></h2>
 
-    <img class="overview-image" id="galleryOverview" src="" alt="Colección completa">
+    <img class="overview-image" id="galleryOverview" src="" alt="Komplette Kollektion">
 
-    <p id="galleryInstruction">Elige el producto que deseas consultar.</p>
+    <p id="galleryInstruction"></p>
 
     <div class="modal-products" id="galleryProducts"></div>
 
@@ -678,17 +668,17 @@ footer strong {color:var(--gold)}
 
   <div class="modal-content detail-content">
 
-    <button class="close" onclick="closeDetail()" aria-label="Cerrar">×</button>
+    <button class="close" onclick="closeDetail()" aria-label="Schließen">×</button>
 
     <h2 id="detailTitle"></h2>
 
-    <img class="detail-image" id="detailImage" src="" alt="Producto">
+    <img class="detail-image" id="detailImage" src="" alt="Produkt">
 
     <p class="detail-code" id="detailCode"></p>
 
     <p class="detail-description" id="detailDescription"></p>
 
-    <a class="btn btn-whatsapp" id="detailWhatsApp" href="#" target="_blank" rel="noopener" data-i18n="whatsapp">PEDIR POR WHATSAPP</a>
+    <a class="btn btn-whatsapp" id="detailWhatsApp" href="#" target="_blank" rel="noopener" data-i18n="whatsapp"></a>
 
   </div>
 
@@ -696,9 +686,7 @@ footer strong {color:var(--gold)}
 
 <script>
 
-const ROOT =
-
-"https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/";
+const ROOT = "https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/";
 
 const WA = "491745201068";
 
@@ -722,7 +710,7 @@ const collections = {
 
   mascaras:{
 
-    title:"Máscaras de pestañas",
+    titleKey:"mascaraTitle",
 
     folder:FOLDERS.mascara,
 
@@ -730,15 +718,15 @@ const collections = {
 
     products:[
 
-      {code:"MM071",file:"ar-MM071-mascara.png",name:"Máscara de pestañas"},
+      {code:"MM071",file:"ar-MM071-mascara.png"},
 
-      {code:"MM072",file:"ar-MM072-mascara.png",name:"Máscara de pestañas"},
+      {code:"MM072",file:"ar-MM072-mascara.png"},
 
-      {code:"MM073",file:"ar-MM073-mascara.png",name:"Máscara de pestañas"},
+      {code:"MM073",file:"ar-MM073-mascara.png"},
 
-      {code:"MM074",file:"ar-MM074-mascara.png",name:"Máscara de pestañas"},
+      {code:"MM074",file:"ar-MM074-mascara.png"},
 
-      {code:"MM075",file:"ar-MM075-mascara.png",name:"Máscara de pestañas"}
+      {code:"MM075",file:"ar-MM075-mascara.png"}
 
     ]
 
@@ -746,7 +734,7 @@ const collections = {
 
   eyestay:{
 
-    title:"Extra EyeStay",
+    titleKey:"eyeTitle",
 
     folder:FOLDERS.eye,
 
@@ -754,19 +742,19 @@ const collections = {
 
     products:[
 
-      {code:"MM016",file:"ar-MM016-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM016",file:"ar-MM016-extra-eyestay.PNG"},
 
-      {code:"MM017",file:"ar-MM017-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM017",file:"ar-MM017-extra-eyestay.PNG"},
 
-      {code:"MM018",file:"ar-MM018-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM018",file:"ar-MM018-extra-eyestay.PNG"},
 
-      {code:"MM019",file:"ar-MM019-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM019",file:"ar-MM019-extra-eyestay.PNG"},
 
-      {code:"MM020",file:"ar-MM020-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM020",file:"ar-MM020-extra-eyestay.PNG"},
 
-      {code:"MM021",file:"ar-MM021-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM021",file:"ar-MM021-extra-eyestay.PNG"},
 
-      {code:"MM022",file:"ar-MM022-extra-eyestay.PNG",name:"Extra EyeStay"},
+      {code:"MM022",file:"ar-MM022-extra-eyestay.PNG"},
 
       {code:"MM023",file:"ar-MM023-extra-eyestay.PNG",name:"Bold Orchid"}
 
@@ -776,19 +764,19 @@ const collections = {
 
   sombras1:{
 
-    title:"Sombras · Colección 1",
+    titleKey:"shadow1",
 
     folder:FOLDERS.shadow,
 
-    overview:"coleccion-1-sombras-de-ojos-MKOM10-MKON15.PNG",
+    /* NOMBRE EXACTO DEL ARCHIVO EN GITHUB */
+
+    overview:"coleccion-1-sombras-de-ojos-MM10-MM15.PNG",
 
     products:Array.from({length:6},(_,i)=>({
 
       code:"MKOM"+(10+i),
 
-      file:"coleccion-1-MKOM"+(10+i)+".PNG",
-
-      name:"Sombra de ojos en polvo prensado"
+      file:"coleccion-1-MKOM"+(10+i)+".PNG"
 
     }))
 
@@ -796,19 +784,19 @@ const collections = {
 
   sombras2:{
 
-    title:"Sombras · Colección 2",
+    titleKey:"shadow2",
 
     folder:FOLDERS.shadow,
 
-    overview:"coleccion-2-sombras-de-ojos-MKOM16-MKON25.PNG",
+    /* NOMBRE EXACTO DEL ARCHIVO EN GITHUB */
+
+    overview:"coleccion-2-sombras-de-ojos-MM16-MM25.PNG",
 
     products:Array.from({length:10},(_,i)=>({
 
       code:"MKOM"+(16+i),
 
-      file:"coleccion-2-MKOM"+(16+i)+".PNG",
-
-      name:"Sombra de ojos en polvo prensado"
+      file:"coleccion-2-MKOM"+(16+i)+".PNG"
 
     }))
 
@@ -816,7 +804,7 @@ const collections = {
 
   sombras3:{
 
-    title:"Sombras · Colección 3",
+    titleKey:"shadow3",
 
     folder:FOLDERS.shadow,
 
@@ -826,9 +814,7 @@ const collections = {
 
       code:"MKOM"+(26+i),
 
-      file:"coleccion-3-MKOM"+(26+i)+".PNG",
-
-      name:"Sombra de ojos en polvo prensado"
+      file:"coleccion-3-MKOM"+(26+i)+".PNG"
 
     }))
 
@@ -838,31 +824,35 @@ const collections = {
 
 const translations = {
 
-es:{
-
-  viewProducts:"VER PRODUCTO",
-
-  details:"VER DETALLE",
-
-  choose:"Elige el producto que deseas consultar.",
-
-  code:"Artículo",
-
-  description:"Consulta las características y disponibilidad de este producto. Para más información, escríbenos por WhatsApp.",
-
-  whatsapp:"PEDIR POR WHATSAPP",
-
-  header:"Belleza · Color · Elegancia",
-
-  intro:"Descubre el mundo del maquillaje",
-
-  introText:"Una selección de maquillaje para expresar tu personalidad. Descubre nuestras colecciones y encuentra tus favoritos.",
-
-  footer:"Pedidos y consultas por WhatsApp"
-
-},
-
 de:{
+
+  header:"Schönheit · Farbe · Eleganz",
+
+  intro:"Entdecke die Welt des Make-ups",
+
+  introText:"Entdecke unsere Make-up-Kollektionen und finde deine Lieblingsprodukte.",
+
+  footer:"Bestellungen und Anfragen per WhatsApp",
+
+  footerBrand:"Make-up und Farben",
+
+  mascaraTitle:"Wimperntusche",
+
+  mascaraSub:"AUSDRUCKSSTARKE AUGENBLICKE",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 FARBEN · DEIN LOOK, DEIN STIL",
+
+  shadowTitle:"Gepresster Lidschatten",
+
+  shadowSub:"26 FARBEN · DREI KOLLEKTIONEN",
+
+  shadow1:"KOLLEKTION 1 · 6 FARBEN",
+
+  shadow2:"KOLLEKTION 2 · 10 FARBEN",
+
+  shadow3:"KOLLEKTION 3 · 10 FARBEN",
 
   viewProducts:"PRODUKTE ANSEHEN",
 
@@ -876,17 +866,93 @@ de:{
 
   whatsapp:"PER WHATSAPP BESTELLEN",
 
-  header:"Schönheit · Farbe · Eleganz",
+  mascaraName:"Wimperntusche",
 
-  intro:"Entdecke die Welt des Make-ups",
+  shadowName:"Gepresster Lidschatten",
 
-  introText:"Entdecke unsere Make-up-Kollektionen und finde deine Lieblingsprodukte.",
+  close:"Schließen"
 
-  footer:"Bestellungen und Anfragen per WhatsApp"
+},
+
+es:{
+
+  header:"Belleza · Color · Elegancia",
+
+  intro:"Descubre el mundo del maquillaje",
+
+  introText:"Descubre nuestras colecciones de maquillaje y encuentra tus productos favoritos.",
+
+  footer:"Pedidos y consultas por WhatsApp",
+
+  footerBrand:"Maquillajes y Colores",
+
+  mascaraTitle:"Máscaras de pestañas",
+
+  mascaraSub:"MIRADAS QUE ENAMORAN",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 COLORES · TU MIRADA, TU ESTILO",
+
+  shadowTitle:"Sombras de ojos en polvo prensado",
+
+  shadowSub:"26 TONOS · TRES COLECCIONES",
+
+  shadow1:"COLECCIÓN 1 · 6 TONOS",
+
+  shadow2:"COLECCIÓN 2 · 10 TONOS",
+
+  shadow3:"COLECCIÓN 3 · 10 TONOS",
+
+  viewProducts:"VER PRODUCTO",
+
+  details:"VER DETALLE",
+
+  choose:"Elige el producto que deseas consultar.",
+
+  code:"Artículo",
+
+  description:"Consulta las características y disponibilidad de este producto. Para más información, escríbenos por WhatsApp.",
+
+  whatsapp:"PEDIR POR WHATSAPP",
+
+  mascaraName:"Máscara de pestañas",
+
+  shadowName:"Sombra de ojos en polvo prensado",
+
+  close:"Cerrar"
 
 },
 
 it:{
+
+  header:"Bellezza · Colore · Eleganza",
+
+  intro:"Scopri il mondo del make-up",
+
+  introText:"Scopri le nostre collezioni e trova i tuoi prodotti preferiti.",
+
+  footer:"Ordini e informazioni su WhatsApp",
+
+  footerBrand:"Make-up e Colori",
+
+  mascaraTitle:"Mascara",
+
+  mascaraSub:"SGUARDI CHE FANNO INNAMORARE",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 COLORI · IL TUO SGUARDO, IL TUO STILE",
+
+  shadowTitle:"Ombretti in polvere compatta",
+
+  shadowSub:"26 TONALITÀ · TRE COLLEZIONI",
+
+  shadow1:"COLLEZIONE 1 · 6 TONALITÀ",
+
+  shadow2:"COLLEZIONE 2 · 10 TONALITÀ",
+
+  shadow3:"COLLEZIONE 3 · 10 TONALITÀ",
 
   viewProducts:"VEDI PRODOTTI",
 
@@ -900,17 +966,43 @@ it:{
 
   whatsapp:"ORDINA SU WHATSAPP",
 
-  header:"Bellezza · Colore · Eleganza",
+  mascaraName:"Mascara",
 
-  intro:"Scopri il mondo del make-up",
+  shadowName:"Ombretto in polvere compatta",
 
-  introText:"Scopri le nostre collezioni e trova i tuoi prodotti preferiti.",
-
-  footer:"Ordini e informazioni su WhatsApp"
+  close:"Chiudi"
 
 },
 
 tr:{
+
+  header:"Güzellik · Renk · Zarafet",
+
+  intro:"Makyaj dünyasını keşfet",
+
+  introText:"Makyaj koleksiyonlarımızı keşfedin ve favori ürünlerinizi bulun.",
+
+  footer:"Sipariş ve bilgi için WhatsApp",
+
+  footerBrand:"Makyaj ve Renkler",
+
+  mascaraTitle:"Kirpik Maskarası",
+
+  mascaraSub:"ETKİLEYİCİ BAKIŞLAR",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 RENK · SENİN BAKIŞIN, SENİN TARZIN",
+
+  shadowTitle:"Preslenmiş Toz Göz Farı",
+
+  shadowSub:"26 TON · ÜÇ KOLEKSİYON",
+
+  shadow1:"1. KOLEKSİYON · 6 TON",
+
+  shadow2:"2. KOLEKSİYON · 10 TON",
+
+  shadow3:"3. KOLEKSİYON · 10 TON",
 
   viewProducts:"ÜRÜNLERİ GÖR",
 
@@ -924,17 +1016,43 @@ tr:{
 
   whatsapp:"WHATSAPP'TAN SİPARİŞ",
 
-  header:"Güzellik · Renk · Zarafet",
+  mascaraName:"Kirpik Maskarası",
 
-  intro:"Makyaj dünyasını keşfet",
+  shadowName:"Preslenmiş Toz Göz Farı",
 
-  introText:"Makyaj koleksiyonlarımızı keşfedin ve favori ürünlerinizi bulun.",
-
-  footer:"Sipariş ve bilgi için WhatsApp"
+  close:"Kapat"
 
 },
 
 ru:{
+
+  header:"Красота · Цвет · Элегантность",
+
+  intro:"Откройте мир макияжа",
+
+  introText:"Откройте наши коллекции макияжа и выберите любимые продукты.",
+
+  footer:"Заказы и вопросы через WhatsApp",
+
+  footerBrand:"Макияж и Цвета",
+
+  mascaraTitle:"Тушь для ресниц",
+
+  mascaraSub:"ВЫРАЗИТЕЛЬНЫЙ ВЗГЛЯД",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 ЦВЕТОВ · ТВОЙ ВЗГЛЯД, ТВОЙ СТИЛЬ",
+
+  shadowTitle:"Прессованные тени для век",
+
+  shadowSub:"26 ОТТЕНКОВ · ТРИ КОЛЛЕКЦИИ",
+
+  shadow1:"КОЛЛЕКЦИЯ 1 · 6 ОТТЕНКОВ",
+
+  shadow2:"КОЛЛЕКЦИЯ 2 · 10 ОТТЕНКОВ",
+
+  shadow3:"КОЛЛЕКЦИЯ 3 · 10 ОТТЕНКОВ",
 
   viewProducts:"СМОТРЕТЬ ТОВАРЫ",
 
@@ -948,17 +1066,43 @@ ru:{
 
   whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
 
-  header:"Красота · Цвет · Элегантность",
+  mascaraName:"Тушь для ресниц",
 
-  intro:"Откройте мир макияжа",
+  shadowName:"Прессованные тени для век",
 
-  introText:"Откройте наши коллекции макияжа и выберите любимые продукты.",
-
-  footer:"Заказы и вопросы через WhatsApp"
+  close:"Закрыть"
 
 },
 
 pt:{
+
+  header:"Beleza · Cor · Elegância",
+
+  intro:"Descubra o mundo da maquilhagem",
+
+  introText:"Descubra as nossas coleções e encontre os seus produtos favoritos.",
+
+  footer:"Encomendas e informações pelo WhatsApp",
+
+  footerBrand:"Maquilhagem e Cores",
+
+  mascaraTitle:"Máscara de pestanas",
+
+  mascaraSub:"OLHARES QUE ENCANTAM",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 CORES · O TEU OLHAR, O TEU ESTILO",
+
+  shadowTitle:"Sombras em pó compacto",
+
+  shadowSub:"26 TONS · TRÊS COLEÇÕES",
+
+  shadow1:"COLEÇÃO 1 · 6 TONS",
+
+  shadow2:"COLEÇÃO 2 · 10 TONS",
+
+  shadow3:"COLEÇÃO 3 · 10 TONS",
 
   viewProducts:"VER PRODUTOS",
 
@@ -972,17 +1116,43 @@ pt:{
 
   whatsapp:"ENCOMENDAR PELO WHATSAPP",
 
-  header:"Beleza · Cor · Elegância",
+  mascaraName:"Máscara de pestanas",
 
-  intro:"Descubra o mundo da maquilhagem",
+  shadowName:"Sombra em pó compacto",
 
-  introText:"Descubra as nossas coleções e encontre os seus produtos favoritos.",
-
-  footer:"Encomendas e informações pelo WhatsApp"
+  close:"Fechar"
 
 },
 
 sq:{
+
+  header:"Bukuri · Ngjyra · Elegancë",
+
+  intro:"Zbuloni botën e makijazhit",
+
+  introText:"Zbuloni koleksionet tona të makijazhit dhe produktet tuaja të preferuara.",
+
+  footer:"Porosi dhe informacione në WhatsApp",
+
+  footerBrand:"Makijazh dhe Ngjyra",
+
+  mascaraTitle:"Maskara për qerpikë",
+
+  mascaraSub:"VËSHTRIME QË MAGJEPSIN",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 NGJYRA · STILI YT",
+
+  shadowTitle:"Hije sysh në pluhur të presuar",
+
+  shadowSub:"26 NUANCA · TRE KOLEKSIONE",
+
+  shadow1:"KOLEKSIONI 1 · 6 NUANCA",
+
+  shadow2:"KOLEKSIONI 2 · 10 NUANCA",
+
+  shadow3:"KOLEKSIONI 3 · 10 NUANCA",
 
   viewProducts:"SHIKO PRODUKTET",
 
@@ -996,17 +1166,43 @@ sq:{
 
   whatsapp:"POROSIT NË WHATSAPP",
 
-  header:"Bukuri · Ngjyra · Elegancë",
+  mascaraName:"Maskara për qerpikë",
 
-  intro:"Zbuloni botën e makijazhit",
+  shadowName:"Hije sysh në pluhur të presuar",
 
-  introText:"Zbuloni koleksionet tona të makijazhit dhe produktet tuaja të preferuara.",
-
-  footer:"Porosi dhe informacione në WhatsApp"
+  close:"Mbyll"
 
 },
 
 en:{
+
+  header:"Beauty · Colour · Elegance",
+
+  intro:"Discover the world of makeup",
+
+  introText:"Explore our makeup collections and find your favourites.",
+
+  footer:"Orders and enquiries via WhatsApp",
+
+  footerBrand:"Makeup and Colours",
+
+  mascaraTitle:"Mascara",
+
+  mascaraSub:"EYES THAT CAPTIVATE",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 COLOURS · YOUR LOOK, YOUR STYLE",
+
+  shadowTitle:"Pressed Powder Eyeshadow",
+
+  shadowSub:"26 SHADES · THREE COLLECTIONS",
+
+  shadow1:"COLLECTION 1 · 6 SHADES",
+
+  shadow2:"COLLECTION 2 · 10 SHADES",
+
+  shadow3:"COLLECTION 3 · 10 SHADES",
 
   viewProducts:"VIEW PRODUCTS",
 
@@ -1020,17 +1216,43 @@ en:{
 
   whatsapp:"ORDER VIA WHATSAPP",
 
-  header:"Beauty · Colour · Elegance",
+  mascaraName:"Mascara",
 
-  intro:"Discover the world of makeup",
+  shadowName:"Pressed powder eyeshadow",
 
-  introText:"Explore our makeup collections and find your favourites.",
-
-  footer:"Orders and enquiries via WhatsApp"
+  close:"Close"
 
 },
 
 fr:{
+
+  header:"Beauté · Couleur · Élégance",
+
+  intro:"Découvrez le monde du maquillage",
+
+  introText:"Découvrez nos collections de maquillage et trouvez vos produits préférés.",
+
+  footer:"Commandes et renseignements par WhatsApp",
+
+  footerBrand:"Maquillage et Couleurs",
+
+  mascaraTitle:"Mascara",
+
+  mascaraSub:"DES REGARDS QUI SÉDUISENT",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 COULEURS · VOTRE STYLE",
+
+  shadowTitle:"Fards à paupières en poudre pressée",
+
+  shadowSub:"26 TEINTES · TROIS COLLECTIONS",
+
+  shadow1:"COLLECTION 1 · 6 TEINTES",
+
+  shadow2:"COLLECTION 2 · 10 TEINTES",
+
+  shadow3:"COLLECTION 3 · 10 TEINTES",
 
   viewProducts:"VOIR LES PRODUITS",
 
@@ -1044,17 +1266,43 @@ fr:{
 
   whatsapp:"COMMANDER SUR WHATSAPP",
 
-  header:"Beauté · Couleur · Élégance",
+  mascaraName:"Mascara",
 
-  intro:"Découvrez le monde du maquillage",
+  shadowName:"Fard à paupières en poudre pressée",
 
-  introText:"Découvrez nos collections de maquillage et trouvez vos produits préférés.",
-
-  footer:"Commandes et renseignements par WhatsApp"
+  close:"Fermer"
 
 },
 
 pl:{
+
+  header:"Piękno · Kolor · Elegancja",
+
+  intro:"Odkryj świat makijażu",
+
+  introText:"Odkryj nasze kolekcje makijażu i znajdź swoje ulubione produkty.",
+
+  footer:"Zamówienia i pytania przez WhatsApp",
+
+  footerBrand:"Makijaż i Kolory",
+
+  mascaraTitle:"Tusz do rzęs",
+
+  mascaraSub:"SPOJRZENIE, KTÓRE ZACHWYCA",
+
+  eyeTitle:"Extra EyeStay",
+
+  eyeSub:"8 KOLORÓW · TWÓJ STYL",
+
+  shadowTitle:"Prasowane cienie do powiek",
+
+  shadowSub:"26 ODCIENI · TRZY KOLEKCJE",
+
+  shadow1:"KOLEKCJA 1 · 6 ODCIENI",
+
+  shadow2:"KOLEKCJA 2 · 10 ODCIENI",
+
+  shadow3:"KOLEKCJA 3 · 10 ODCIENI",
 
   viewProducts:"ZOBACZ PRODUKTY",
 
@@ -1068,85 +1316,125 @@ pl:{
 
   whatsapp:"ZAMÓW PRZEZ WHATSAPP",
 
-  header:"Piękno · Kolor · Elegancja",
+  mascaraName:"Tusz do rzęs",
 
-  intro:"Odkryj świat makijażu",
+  shadowName:"Prasowany cień do powiek",
 
-  introText:"Odkryj nasze kolekcje makijażu i znajdź swoje ulubione produkty.",
-
-  footer:"Zamówienia i pytania przez WhatsApp"
+  close:"Zamknij"
 
 }
 
 };
 
-let currentLanguage="de";
+let currentLanguage = "de";
 
-let activeCollection=null;
+let activeCollection = null;
 
 function t(key) {
 
-  return translations[currentLanguage][key] || translations.es[key] || key;
+  return translations[currentLanguage][key] || translations.de[key] || key;
+
+}
+
+function productName(product) {
+
+  if (product.name) return product.name;
+
+  if (product.code.startsWith("MKOM")) return t("shadowName");
+
+  if (product.code.startsWith("MM07")) return t("mascaraName");
+
+  return "Extra EyeStay";
 
 }
 
 function whatsappLink(product) {
 
-  const message="Hola, quisiera información sobre "+product.name+
+  const message =
 
-  ", artículo "+product.code+".";
+    "Hallo, ich interessiere mich für " +
 
-  return "https://wa.me/"+WA+"?text="+encodeURIComponent(message);
+    productName(product) +
+
+    ", Artikel " + product.code + ".";
+
+  return "https://wa.me/" + WA + "?text=" + encodeURIComponent(message);
 
 }
 
 function openGallery(id) {
 
-  const collection=collections[id];
+  const collection = collections[id];
 
-  if(!collection) return;
+  if (!collection) return;
 
-  activeCollection=collection;
+  activeCollection = collection;
 
-  document.getElementById("galleryTitle").textContent=collection.title;
+  document.getElementById("galleryTitle").textContent =
 
-  document.getElementById("galleryInstruction").textContent=t("choose");
+    t(collection.titleKey);
 
-  const overview=document.getElementById("galleryOverview");
+  document.getElementById("galleryInstruction").textContent =
 
-  overview.src=asset(collection.folder,collection.overview);
+    t("choose");
 
-  overview.alt=collection.title;
+  const overview = document.getElementById("galleryOverview");
 
-  const grid=document.getElementById("galleryProducts");
+  overview.src = asset(collection.folder, collection.overview);
 
-  grid.innerHTML=collection.products.map((product,index)=>{
+  overview.alt = t(collection.titleKey);
 
-    const image=asset(collection.folder,product.file);
+  overview.onerror = function() {
+
+    this.style.display = "none";
+
+  };
+
+  overview.onload = function() {
+
+    this.style.display = "block";
+
+  };
+
+  const grid = document.getElementById("galleryProducts");
+
+  grid.innerHTML = collection.products.map((product,index) => {
+
+    const image = asset(collection.folder, product.file);
+
+    const name = productName(product);
 
     return `
 
       <article class="product">
 
-        <img src="${image}" loading="lazy" alt="${product.name} ${product.code}"
+        <img src="${image}" loading="lazy"
 
-        onerror="this.style.display='none'">
+             alt="${name} ${product.code}"
 
-        <h3>${product.name}</h3>
+             onerror="this.style.display='none'">
+
+        <h3>${name}</h3>
 
         <p>${t("code")}: ${product.code}</p>
 
         <button type="button" class="detail-btn"
 
-        onclick="openDetail(${index})">${t("details")}</button>
+                onclick="openDetail(${index})">
 
-      </article>`;
+          ${t("details")}
+
+        </button>
+
+      </article>
+
+    `;
 
   }).join("");
 
   document.getElementById("galleryModal").classList.add("open");
 
-  document.body.style.overflow="hidden";
+  document.body.style.overflow = "hidden";
 
 }
 
@@ -1154,41 +1442,43 @@ function closeGallery() {
 
   document.getElementById("galleryModal").classList.remove("open");
 
-  document.body.style.overflow="";
+  document.body.style.overflow = "";
 
 }
 
 function closeGalleryOutside(event) {
 
-  if(event.target.id==="galleryModal") closeGallery();
+  if (event.target.id === "galleryModal") closeGallery();
 
 }
 
 function openDetail(index) {
 
-  if(!activeCollection) return;
+  if (!activeCollection) return;
 
-  const product=activeCollection.products[index];
+  const product = activeCollection.products[index];
 
-  if(!product) return;
+  if (!product) return;
 
-  document.getElementById("detailTitle").textContent=product.name;
+  document.getElementById("detailTitle").textContent =
 
-  document.getElementById("detailImage").src=
+    productName(product);
 
-  asset(activeCollection.folder,product.file);
+  document.getElementById("detailImage").src =
 
-  document.getElementById("detailCode").textContent=
+    asset(activeCollection.folder, product.file);
 
-  t("code")+": "+product.code;
+  document.getElementById("detailCode").textContent =
 
-  document.getElementById("detailDescription").textContent=
+    t("code") + ": " + product.code;
 
-  t("description");
+  document.getElementById("detailDescription").textContent =
 
-  document.getElementById("detailWhatsApp").href=
+    t("description");
 
-  whatsappLink(product);
+  document.getElementById("detailWhatsApp").href =
+
+    whatsappLink(product);
 
   document.getElementById("detailModal").classList.add("open");
 
@@ -1202,55 +1492,83 @@ function closeDetail() {
 
 function closeDetailOutside(event) {
 
-  if(event.target.id==="detailModal") closeDetail();
+  if (event.target.id === "detailModal") closeDetail();
 
 }
 
 function changeLanguage(lang) {
 
-  currentLanguage=lang;
+  if (!translations[lang]) lang = "de";
 
-  document.documentElement.lang=lang;
+  currentLanguage = lang;
 
-  document.getElementById("headerSubtitle").textContent=t("header");
+  document.documentElement.lang = lang;
 
-  document.getElementById("introTitle").textContent=t("intro");
+  document.getElementById("language").value = lang;
 
-  document.getElementById("introText").textContent=t("introText");
+  document.getElementById("headerSubtitle").textContent = t("header");
 
-  document.getElementById("footerText").textContent=t("footer");
+  document.getElementById("introTitle").textContent = t("intro");
 
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
+  document.getElementById("introText").textContent = t("introText");
 
-    el.textContent=t(el.dataset.i18n);
+  document.getElementById("footerText").textContent = t("footer");
+
+  document.getElementById("footerBrand").textContent = t("footerBrand");
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+
+    el.textContent = t(el.dataset.i18n);
 
   });
 
-  if(activeCollection &&
+  if (activeCollection &&
 
-  document.getElementById("galleryModal").classList.contains("open")) {
+      document.getElementById("galleryModal").classList.contains("open")) {
 
-    const id=Object.keys(collections).find(
+    const id = Object.keys(collections).find(
 
-      key=>collections[key]===activeCollection
+      key => collections[key] === activeCollection
 
     );
 
-    if(id) openGallery(id);
+    if (id) openGallery(id);
+
+  }
+
+  if (document.getElementById("detailModal").classList.contains("open")) {
+
+    const detailCode = document.getElementById("detailCode").textContent;
+
+    const code = detailCode.split(": ").pop();
+
+    const product = activeCollection?.products.find(p => p.code === code);
+
+    if (product) {
+
+      document.getElementById("detailTitle").textContent = productName(product);
+
+      document.getElementById("detailCode").textContent = t("code") + ": " + product.code;
+
+      document.getElementById("detailDescription").textContent = t("description");
+
+      document.getElementById("detailWhatsApp").href = whatsappLink(product);
+
+    }
 
   }
 
 }
 
-document.getElementById("language").addEventListener("change",function(){
+document.getElementById("language").addEventListener("change", function() {
 
   changeLanguage(this.value);
 
 });
 
-document.addEventListener("keydown",function(event){
+document.addEventListener("keydown", function(event) {
 
-  if(event.key==="Escape") {
+  if (event.key === "Escape") {
 
     closeDetail();
 
