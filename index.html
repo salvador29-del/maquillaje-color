@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="de">
@@ -190,45 +188,13 @@ video {
 
 }
 
-.overview {
-
-  max-width:850px;
-
-  margin:25px auto;
+.action {
 
   text-align:center;
 
-}
-
-.overview img {
-
-  display:block;
-
-  width:100%;
-
-  height:auto;
-
-  border:2px solid var(--gold);
-
-  border-radius:12px;
-
-  box-shadow:0 8px 25px #0002;
-
-  background:white;
+  margin:22px 0;
 
 }
-
-.overview-label {
-
-  color:#92794c;
-
-  letter-spacing:1px;
-
-  margin:12px 0;
-
-}
-
-.action { text-align:center; margin:22px 0; }
 
 .btn {
 
@@ -262,19 +228,157 @@ video {
 
 .btn-gold { background:#aa8950; }
 
-.products {
+.btn-whatsapp {
 
-  display:none;
+  display:block;
 
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  background:#218c50;
 
-  gap:18px;
-
-  margin:28px auto;
+  margin-top:14px;
 
 }
 
-.products.visible { display:grid; }
+.shadow-buttons {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  gap:12px;
+
+  margin:25px auto;
+
+}
+
+.shadow-buttons .btn { min-width:190px; }
+
+.modal {
+
+  display:none;
+
+  position:fixed;
+
+  inset:0;
+
+  background:#000b;
+
+  z-index:1000;
+
+  padding:15px;
+
+  overflow-y:auto;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+.modal.open { display:flex; }
+
+.modal-content {
+
+  background:var(--cream);
+
+  max-width:950px;
+
+  width:100%;
+
+  max-height:92vh;
+
+  overflow-y:auto;
+
+  border-radius:15px;
+
+  padding:22px;
+
+  position:relative;
+
+  text-align:center;
+
+  border:2px solid var(--gold);
+
+}
+
+.modal-content.detail-content { max-width:480px; }
+
+.close {
+
+  position:sticky;
+
+  float:right;
+
+  top:0;
+
+  z-index:5;
+
+  width:38px;
+
+  height:38px;
+
+  border:1px solid var(--gold);
+
+  border-radius:50%;
+
+  background:#fff;
+
+  color:#333;
+
+  font-size:25px;
+
+  line-height:30px;
+
+  cursor:pointer;
+
+  margin:-8px -8px 5px 8px;
+
+}
+
+.modal-title {
+
+  color:var(--green);
+
+  font-weight:normal;
+
+  font-size:24px;
+
+  padding:8px 35px;
+
+}
+
+.overview-image {
+
+  width:100%;
+
+  max-width:650px;
+
+  height:auto;
+
+  object-fit:contain;
+
+  border:1px solid #e5d7bd;
+
+  border-radius:10px;
+
+  background:white;
+
+  margin:8px auto 20px;
+
+}
+
+.modal-products {
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
+
+  gap:14px;
+
+  margin:20px 0;
+
+}
 
 .product {
 
@@ -296,7 +400,7 @@ video {
 
   width:100%;
 
-  height:205px;
+  height:165px;
 
   object-fit:contain;
 
@@ -308,9 +412,9 @@ video {
 
   color:var(--green);
 
-  font-size:16px;
+  font-size:15px;
 
-  margin:10px 0;
+  margin:10px 0 5px;
 
 }
 
@@ -322,15 +426,7 @@ video {
 
   font-size:13px;
 
-}
-
-.price {
-
-  color:#9b7941;
-
-  font-weight:bold;
-
-  margin:10px 0;
+  margin:6px 0;
 
 }
 
@@ -342,129 +438,59 @@ video {
 
   border:0;
 
-  padding:10px 18px;
+  padding:10px 17px;
 
   border-radius:25px;
 
   cursor:pointer;
 
-  margin:7px 0;
+  margin:8px 0 3px;
+
+  font-weight:bold;
 
 }
 
-.product .btn {
+.detail-content .detail-image {
 
   width:100%;
 
-  padding:11px 8px;
-
-  font-size:10px;
-
-}
-
-.shadow-group {
-
-  margin:30px 0;
-
-  padding:15px;
-
-  border:1px solid #e8dfcf;
-
-  border-radius:12px;
-
-  background:#fffdf9;
-
-}
-
-.shadow-group h3 {
-
-  text-align:center;
-
-  color:var(--green);
-
-  font-weight:normal;
-
-}
-
-.modal {
-
-  display:none;
-
-  position:fixed;
-
-  inset:0;
-
-  background:#000b;
-
-  z-index:1000;
-
-  padding:18px;
-
-  overflow-y:auto;
-
-  align-items:center;
-
-  justify-content:center;
-
-}
-
-.modal.open { display:flex; }
-
-.modal-content {
-
-  background:white;
-
-  max-width:470px;
-
-  width:100%;
-
-  border-radius:15px;
-
-  padding:25px;
-
-  text-align:center;
-
-  position:relative;
-
-}
-
-.modal-content img {
-
-  width:100%;
-
-  max-height:280px;
+  max-height:300px;
 
   object-fit:contain;
 
-}
+  background:white;
 
-.modal-content h2 { color:var(--green); }
-
-.close {
-
-  position:absolute;
-
-  right:15px;
-
-  top:8px;
-
-  font-size:28px;
-
-  background:none;
-
-  border:0;
-
-  cursor:pointer;
+  border-radius:8px;
 
 }
 
-.btn-whatsapp {
+.detail-content h2 { color:var(--green); }
 
-  display:block;
+.detail-code {
 
-  background:#218c50;
+  color:#777;
 
-  margin-top:15px;
+  font-family:Arial,sans-serif;
+
+}
+
+.detail-price {
+
+  color:#9b7941;
+
+  font-size:21px;
+
+  font-weight:bold;
+
+  margin:15px 0;
+
+}
+
+.detail-description {
+
+  color:#555;
+
+  line-height:1.7;
 
 }
 
@@ -488,13 +514,21 @@ footer strong { color:var(--gold); }
 
   .collection { padding:15px 12px; }
 
-  .products { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .modal { padding:8px; }
+
+  .modal-content { padding:14px; max-height:95vh; }
+
+  .modal-products { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
 
   .product { padding:8px; }
 
-  .product img { height:145px; }
+  .product img { height:125px; }
 
-  .product h3 { font-size:14px; }
+  .product h3 { font-size:13px; }
+
+  .detail-btn { font-size:11px; padding:9px 10px; }
+
+  .shadow-buttons .btn { width:100%; }
 
 }
 
@@ -554,7 +588,7 @@ footer strong { color:var(--gold); }
 
 <div class="separator"></div>
 
-<!-- COLECCIÓN 1: MÁSCARAS -->
+<!-- 1. MÁSCARAS -->
 
 <section class="collection">
 
@@ -572,23 +606,9 @@ footer strong { color:var(--gold); }
 
   </div>
 
-  <div class="overview">
-
-    <p class="overview-label" data-i18n="allCollection">TODA LA COLECCIÓN</p>
-
-    <img
-
-      src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/01_Coleccion_Mascaras_Pestanas/coleccion-mascara-todos-juntos.PNG"
-
-      alt="Todos los productos de máscaras de pestañas"
-
-      loading="lazy">
-
-  </div>
-
   <div class="action">
 
-    <button class="btn" onclick="toggleProducts('mascaras',this)" data-i18n="viewProducts">
+    <button class="btn" onclick="openGallery('mascaras')" data-i18n="viewProducts">
 
       VER PRODUCTO
 
@@ -596,13 +616,11 @@ footer strong { color:var(--gold); }
 
   </div>
 
-  <div class="products" id="mascaras"></div>
-
 </section>
 
 <div class="separator"></div>
 
-<!-- COLECCIÓN 2: EXTRA EYESTAY -->
+<!-- 2. EXTRA EYESTAY -->
 
 <section class="collection">
 
@@ -620,23 +638,9 @@ footer strong { color:var(--gold); }
 
   </div>
 
-  <div class="overview">
-
-    <p class="overview-label" data-i18n="allCollection">TODA LA COLECCIÓN</p>
-
-    <img
-
-      src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/02_%20Extra_EyeStay/coleccion-eye-colors-todos-juntos.PNG"
-
-      alt="Los ocho colores Extra EyeStay"
-
-      loading="lazy">
-
-  </div>
-
   <div class="action">
 
-    <button class="btn" onclick="toggleProducts('eyestay',this)" data-i18n="viewProducts">
+    <button class="btn" onclick="openGallery('eyestay')" data-i18n="viewProducts">
 
       VER PRODUCTO
 
@@ -644,13 +648,11 @@ footer strong { color:var(--gold); }
 
   </div>
 
-  <div class="products" id="eyestay"></div>
-
 </section>
 
 <div class="separator"></div>
 
-<!-- COLECCIÓN 3: SOMBRAS -->
+<!-- 3. SOMBRAS: UN VÍDEO Y TRES GALERÍAS INDEPENDIENTES -->
 
 <section class="collection">
 
@@ -668,71 +670,27 @@ footer strong { color:var(--gold); }
 
   </div>
 
-  <div class="shadow-group">
+  <div class="shadow-buttons">
 
-    <h3>COLECCIÓN 1 · MKOM10–MKOM15</h3>
+    <button class="btn" onclick="openGallery('sombras1')">
 
-    <div class="overview">
+      COLECCIÓN 1 · 6 TONOS
 
-      <img
+    </button>
 
-        src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/03_%20Sombra_de_ojos_en_polvo_prensado/coleccion-1-sombras-de-ojos-MKOM10-MKON15.PNG"
+    <button class="btn" onclick="openGallery('sombras2')">
 
-        alt="Primera colección de sombras"
+      COLECCIÓN 2 · 10 TONOS
 
-        loading="lazy">
+    </button>
 
-    </div>
+    <button class="btn" onclick="openGallery('sombras3')">
 
-  </div>
-
-  <div class="shadow-group">
-
-    <h3>COLECCIÓN 2 · MKOM16–MKOM25</h3>
-
-    <div class="overview">
-
-      <img
-
-        src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/03_%20Sombra_de_ojos_en_polvo_prensado/coleccion-2-sombras-de-ojos-MKOM16-MKON25.PNG"
-
-        alt="Segunda colección de sombras"
-
-        loading="lazy">
-
-    </div>
-
-  </div>
-
-  <div class="shadow-group">
-
-    <h3>COLECCIÓN 3 · MKOM26–MKOM35</h3>
-
-    <div class="overview">
-
-      <img
-
-        src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/03_%20Sombra_de_ojos_en_polvo_prensado/coleccion-3-sombras-de-ojos-MKOM26-MKOM35.PNG"
-
-        alt="Tercera colección de sombras"
-
-        loading="lazy">
-
-    </div>
-
-  </div>
-
-  <div class="action">
-
-    <button class="btn" onclick="toggleProducts('sombras',this)" data-i18n="viewProducts">
-
-      VER PRODUCTO
+      COLECCIÓN 3 · 10 TONOS
 
     </button>
 
   </div>
-
-  <div class="products" id="sombras"></div>
 
 </section>
 
@@ -748,7 +706,13 @@ footer strong { color:var(--gold); }
 
   <span id="footerText">Pedidos y consultas por WhatsApp</span>
 
-  <a class="btn btn-whatsapp" href="https://wa.me/491745201068" target="_blank" rel="noopener" data-i18n="whatsapp">
+  <a class="btn btn-whatsapp"
+
+     href="https://wa.me/491745201068"
+
+     target="_blank" rel="noopener"
+
+     data-i18n="whatsapp">
 
     PEDIR POR WHATSAPP
 
@@ -760,25 +724,49 @@ footer strong { color:var(--gold); }
 
 </footer>
 
-<!-- FICHA INDIVIDUAL DEL PRODUCTO -->
+<!-- VENTANILLA 1: COLECCIÓN COMPLETA Y ELECCIÓN -->
 
-<div class="modal" id="detailModal" onclick="closeOutside(event)">
+<div class="modal" id="galleryModal" onclick="closeGalleryOutside(event)">
 
   <div class="modal-content">
 
-    <button class="close" onclick="closeModal()">×</button>
+    <button class="close" type="button" onclick="closeGallery()" aria-label="Cerrar">×</button>
 
-    <img id="modalImage" src="" alt="Producto seleccionado">
+    <h2 class="modal-title" id="galleryTitle"></h2>
 
-    <h2 id="modalTitle"></h2>
+    <img class="overview-image" id="galleryOverview" src="" alt="Todos los productos de la colección">
 
-    <p id="modalCode"></p>
+    <p id="galleryInstruction">Elige el producto que deseas consultar.</p>
 
-    <p id="modalDescription"></p>
+    <div class="modal-products" id="galleryProducts"></div>
 
-    <p class="price" id="modalPrice"></p>
+  </div>
 
-    <a id="modalWhatsApp" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener" data-i18n="whatsapp">
+</div>
+
+<!-- VENTANILLA 2: FICHA INDIVIDUAL -->
+
+<div class="modal" id="detailModal" onclick="closeDetailOutside(event)">
+
+  <div class="modal-content detail-content">
+
+    <button class="close" type="button" onclick="closeDetail()" aria-label="Cerrar">×</button>
+
+    <h2 id="detailTitle"></h2>
+
+    <img class="detail-image" id="detailImage" src="" alt="Producto seleccionado">
+
+    <p class="detail-code" id="detailCode"></p>
+
+    <p class="detail-description" id="detailDescription"></p>
+
+    <p class="detail-price" id="detailPrice"></p>
+
+    <a class="btn btn-whatsapp" id="detailWhatsApp"
+
+       href="#" target="_blank" rel="noopener"
+
+       data-i18n="whatsapp">
 
       PEDIR POR WHATSAPP
 
@@ -798,87 +786,135 @@ const FOLDERS = {
 
   mascara:"01_maquillajes_ojos/01_Coleccion_Mascaras_Pestanas/",
 
-  eye:"01_maquillajes_ojos/02_%20Extra_EyeStay/",
+  eye:"01_maquillajes_ojos/02_ Extra_EyeStay/",
 
-  shadow:"01_maquillajes_ojos/03_%20Sombra_de_ojos_en_polvo_prensado/"
+  shadow:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/"
 
 };
 
-const products = {
+function asset(folder,file) {
 
-  mascaras: [
+  return ROOT + encodeURI(folder + file);
 
-    ["MM071","ar-MM071-mascara.png","Máscara de pestañas"],
+}
 
-    ["MM072","ar-MM072-mascara.png","Máscara de pestañas"],
+/* PRODUCTOS Y FOTOGRAFÍAS REALES */
 
-    ["MM073","ar-MM073-mascara.png","Máscara de pestañas"],
+const collections = {
 
-    ["MM074","ar-MM074-mascara.png","Máscara de pestañas"],
+  mascaras: {
 
-    ["MM075","ar-MM075-mascara.png","Máscara de pestañas"]
+    title:"Máscaras de pestañas",
 
-  ],
+    folder:FOLDERS.mascara,
 
-  eyestay: [
+    overview:"coleccion-mascara-todos-juntos.PNG",
 
-    ["MM016","ar-MM016-extra-eyestay.png","Extra EyeStay"],
+    products:[
 
-    ["MM017","ar-MM017-extra-eyestay.png","Extra EyeStay"],
+      {code:"MM071",file:"ar-MM071-mascara.png",name:"Máscara de pestañas"},
 
-    ["MM018","ar-MM018-extra-eyestay.png","Extra EyeStay"],
+      {code:"MM072",file:"ar-MM072-mascara.png",name:"Máscara de pestañas"},
 
-    ["MM019","ar-MM019-extra-eyestay.png","Extra EyeStay"],
+      {code:"MM073",file:"ar-MM073-mascara.png",name:"Máscara de pestañas"},
 
-    ["MM020","ar-MM020-extra-eyestay.png","Extra EyeStay"],
+      {code:"MM074",file:"ar-MM074-mascara.png",name:"Máscara de pestañas"},
 
-    ["MM021","ar-MM021-extra-eyestay.png","Extra EyeStay"],
+      {code:"MM075",file:"ar-MM075-mascara.png",name:"Máscara de pestañas"}
 
-    ["MM022","ar-MM022-extra-eyestay.png","Extra EyeStay"],
+    ]
 
-    ["MM023","ar-MM023-eyestay.png","Bold Orchid"]
+  },
 
-  ],
+  eyestay: {
 
-  sombras: [
+    title:"Extra EyeStay",
 
-    ...Array.from({length:6},(_,i)=>[
+    folder:FOLDERS.eye,
 
-      "MKOM"+(10+i),
+    overview:"coleccion-eye-colors-todos-juntos.PNG",
 
-      "coleccion-1-MKOM"+(10+i)+".PNG",
+    products:[
 
-      "Sombra de ojos",
+      {code:"MM016",file:"ar-MM016-extra-eyestay.png",name:"Extra EyeStay"},
 
-      1
+      {code:"MM017",file:"ar-MM017-extra-eyestay.png",name:"Extra EyeStay"},
 
-    ]),
+      {code:"MM018",file:"ar-MM018-extra-eyestay.png",name:"Extra EyeStay"},
 
-    ...Array.from({length:10},(_,i)=>[
+      {code:"MM019",file:"ar-MM019-extra-eyestay.png",name:"Extra EyeStay"},
 
-      "MKOM"+(16+i),
+      {code:"MM020",file:"ar-MM020-extra-eyestay.png",name:"Extra EyeStay"},
 
-      "coleccion-2-MKOM"+(16+i)+".PNG",
+      {code:"MM021",file:"ar-MM021-extra-eyestay.png",name:"Extra EyeStay"},
 
-      "Sombra de ojos",
+      {code:"MM022",file:"ar-MM022-extra-eyestay.png",name:"Extra EyeStay"},
 
-      2
+      {code:"MM023",file:"ar-MM023-eyestay.png",name:"Bold Orchid"}
 
-    ]),
+    ]
 
-    ...Array.from({length:10},(_,i)=>[
+  },
 
-      "MKOM"+(26+i),
+  sombras1: {
 
-      "coleccion-3-MKOM"+(26+i)+".PNG",
+    title:"Sombras · Colección 1",
 
-      "Sombra de ojos",
+    folder:FOLDERS.shadow,
 
-      3
+    overview:"coleccion-1-sombras-de-ojos-MKOM10-MKON15.PNG",
 
-    ])
+    products:Array.from({length:6},(_,i)=>({
 
-  ]
+      code:"MKOM"+(10+i),
+
+      file:"coleccion-1-MKOM"+(10+i)+".PNG",
+
+      name:"Sombra de ojos en polvo prensado"
+
+    }))
+
+  },
+
+  sombras2: {
+
+    title:"Sombras · Colección 2",
+
+    folder:FOLDERS.shadow,
+
+    overview:"coleccion-2-sombras-de-ojos-MKOM16-MKON25.PNG",
+
+    products:Array.from({length:10},(_,i)=>({
+
+      code:"MKOM"+(16+i),
+
+      file:"coleccion-2-MKOM"+(16+i)+".PNG",
+
+      name:"Sombra de ojos en polvo prensado"
+
+    }))
+
+  },
+
+  sombras3: {
+
+    title:"Sombras · Colección 3",
+
+    folder:FOLDERS.shadow,
+
+    overview:"coleccion-3-sombras-de-ojos-MKOM26-MKOM35.PNG",
+
+    products:Array.from({length:10},(_,i)=>({
+
+      code:"MKOM"+(26+i),
+
+      file:"coleccion-3-MKOM"+(26+i)+".PNG",
+
+      name:"Sombra de ojos en polvo prensado"
+
+    }))
+
+  }
 
 };
 
@@ -886,19 +922,19 @@ const translations = {
 
   es:{
 
-    allCollection:"TODA LA COLECCIÓN",
-
     viewProducts:"VER PRODUCTO",
 
     details:"VER DETALLE",
 
-    whatsapp:"PEDIR POR WHATSAPP",
+    choose:"Elige el producto que deseas consultar.",
 
     code:"Artículo",
 
     price:"Precio: consultar",
 
-    description:"Consulta aquí las características, disponibilidad y precio de este producto. Estamos a tu disposición por WhatsApp.",
+    description:"Consulta las características y disponibilidad de este producto. Para más información, escríbenos por WhatsApp.",
+
+    whatsapp:"PEDIR POR WHATSAPP",
 
     header:"Belleza · Color · Elegancia",
 
@@ -912,19 +948,19 @@ const translations = {
 
   de:{
 
-    allCollection:"DIE GESAMTE KOLLEKTION",
-
     viewProducts:"PRODUKTE ANSEHEN",
 
     details:"DETAILS ANSEHEN",
 
-    whatsapp:"PER WHATSAPP BESTELLEN",
+    choose:"Wähle das Produkt aus, über das du mehr erfahren möchtest.",
 
     code:"Artikel",
 
     price:"Preis: auf Anfrage",
 
-    description:"Hier erhältst du Informationen zu Eigenschaften, Verfügbarkeit und Preis dieses Produkts. Wir beraten dich gerne per WhatsApp.",
+    description:"Erfahre mehr über Eigenschaften und Verfügbarkeit dieses Produkts. Kontaktiere uns gerne per WhatsApp.",
+
+    whatsapp:"PER WHATSAPP BESTELLEN",
 
     header:"Schönheit · Farbe · Eleganz",
 
@@ -938,19 +974,19 @@ const translations = {
 
   it:{
 
-    allCollection:"TUTTA LA COLLEZIONE",
-
     viewProducts:"VEDI PRODOTTI",
 
     details:"VEDI DETTAGLI",
 
-    whatsapp:"ORDINA SU WHATSAPP",
+    choose:"Scegli il prodotto che desideri conoscere.",
 
     code:"Articolo",
 
     price:"Prezzo: su richiesta",
 
-    description:"Scopri le caratteristiche, la disponibilità e il prezzo di questo prodotto. Contattaci su WhatsApp.",
+    description:"Scopri le caratteristiche e la disponibilità del prodotto. Contattaci su WhatsApp.",
+
+    whatsapp:"ORDINA SU WHATSAPP",
 
     header:"Bellezza · Colore · Eleganza",
 
@@ -964,19 +1000,19 @@ const translations = {
 
   tr:{
 
-    allCollection:"TÜM KOLEKSİYON",
-
     viewProducts:"ÜRÜNLERİ GÖR",
 
     details:"DETAYLARI GÖR",
 
-    whatsapp:"WHATSAPP'TAN SİPARİŞ",
+    choose:"İlgilendiğiniz ürünü seçin.",
 
     code:"Ürün kodu",
 
     price:"Fiyat: sorunuz",
 
-    description:"Bu ürünün özellikleri, stok durumu ve fiyatı için WhatsApp üzerinden bize ulaşın.",
+    description:"Ürünün özellikleri ve stok durumu için WhatsApp üzerinden bize ulaşın.",
+
+    whatsapp:"WHATSAPP'TAN SİPARİŞ",
 
     header:"Güzellik · Renk · Zarafet",
 
@@ -990,19 +1026,19 @@ const translations = {
 
   ru:{
 
-    allCollection:"ВСЯ КОЛЛЕКЦИЯ",
-
     viewProducts:"СМОТРЕТЬ ТОВАРЫ",
 
     details:"ПОДРОБНЕЕ",
 
-    whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
+    choose:"Выберите товар, который вас интересует.",
 
     code:"Артикул",
 
     price:"Цена: уточняйте",
 
-    description:"Узнайте характеристики, наличие и цену этого товара через WhatsApp.",
+    description:"Узнайте характеристики и наличие товара через WhatsApp.",
+
+    whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
 
     header:"Красота · Цвет · Элегантность",
 
@@ -1016,19 +1052,19 @@ const translations = {
 
   pt:{
 
-    allCollection:"TODA A COLEÇÃO",
-
     viewProducts:"VER PRODUTOS",
 
     details:"VER DETALHES",
 
-    whatsapp:"ENCOMENDAR PELO WHATSAPP",
+    choose:"Escolha o produto que deseja consultar.",
 
     code:"Artigo",
 
     price:"Preço: consultar",
 
-    description:"Consulte as características, disponibilidade e preço deste produto pelo WhatsApp.",
+    description:"Consulte as características e disponibilidade deste produto pelo WhatsApp.",
+
+    whatsapp:"ENCOMENDAR PELO WHATSAPP",
 
     header:"Beleza · Cor · Elegância",
 
@@ -1042,19 +1078,19 @@ const translations = {
 
   sq:{
 
-    allCollection:"I GJITHË KOLEKSIONI",
-
     viewProducts:"SHIKO PRODUKTET",
 
     details:"SHIKO DETAJET",
 
-    whatsapp:"POROSIT NË WHATSAPP",
+    choose:"Zgjidhni produktin për të cilin dëshironi informacion.",
 
     code:"Artikulli",
 
     price:"Çmimi: pyesni",
 
-    description:"Për karakteristikat, disponueshmërinë dhe çmimin e këtij produkti na kontaktoni në WhatsApp.",
+    description:"Për karakteristikat dhe disponueshmërinë e produktit na kontaktoni në WhatsApp.",
+
+    whatsapp:"POROSIT NË WHATSAPP",
 
     header:"Bukuri · Ngjyra · Elegancë",
 
@@ -1070,131 +1106,151 @@ const translations = {
 
 let currentLanguage = "de";
 
+let activeCollection = null;
+
 function t(key) {
 
   return translations[currentLanguage][key] || translations.es[key] || key;
 
 }
 
-function whatsappLink(code,name) {
+function whatsappLink(product) {
 
-  const message = `Hola, quisiera información sobre ${name}, artículo ${code}.`;
+  const message =
 
-  return `https://wa.me/${WA}?text=${encodeURIComponent(message)}`;
+    "Hola, quisiera información sobre " +
 
-}
+    product.name + ", artículo " + product.code + ".";
 
-function createProduct(product,folder,type) {
-
-  const [code,file,name,collection] = product;
-
-  const image = ROOT + folder + encodeURIComponent(file).replace(/%2F/g,"/");
-
-  const collectionText = collection ? " · Colección " + collection : "";
-
-  return `
-
-    <article class="product">
-
-      <img src="${image}" loading="lazy" alt="${name} ${code}">
-
-      <h3>${name}</h3>
-
-      <p>${t("code")}: ${code}${collectionText}</p>
-
-      <div class="price">${t("price")}</div>
-
-      <button class="detail-btn"
-
-        onclick="showDetails('${code}','${image}','${name}','${collection || ""}')">
-
-        ${t("details")}
-
-      </button>
-
-      <a class="btn btn-whatsapp"
-
-        href="${whatsappLink(code,name)}"
-
-        target="_blank" rel="noopener">
-
-        ${t("whatsapp")}
-
-      </a>
-
-    </article>
-
-  `;
+  return "https://wa.me/" + WA + "?text=" + encodeURIComponent(message);
 
 }
 
-function renderProducts() {
+/* ABRIR LA VENTANILLA DE LA COLECCIÓN */
 
-  document.getElementById("mascaras").innerHTML =
+function openGallery(id) {
 
-    products.mascaras.map(p=>createProduct(p,FOLDERS.mascara,"mascara")).join("");
+  const collection = collections[id];
 
-  document.getElementById("eyestay").innerHTML =
+  if (!collection) return;
 
-    products.eyestay.map(p=>createProduct(p,FOLDERS.eye,"eye")).join("");
+  activeCollection = collection;
 
-  document.getElementById("sombras").innerHTML =
+  document.getElementById("galleryTitle").textContent = collection.title;
 
-    products.sombras.map(p=>createProduct(p,FOLDERS.shadow,"shadow")).join("");
+  document.getElementById("galleryInstruction").textContent = t("choose");
+
+  const overview = document.getElementById("galleryOverview");
+
+  overview.src = asset(collection.folder,collection.overview);
+
+  overview.alt = collection.title;
+
+  const grid = document.getElementById("galleryProducts");
+
+  grid.innerHTML = collection.products.map((product,index) => {
+
+    const image = asset(collection.folder,product.file);
+
+    return `
+
+      <article class="product">
+
+        <img src="${image}" loading="lazy" alt="${product.name} ${product.code}">
+
+        <h3>${product.name}</h3>
+
+        <p>${t("code")}: ${product.code}</p>
+
+        <button type="button" class="detail-btn"
+
+          onclick="openDetail(${index})">
+
+          ${t("details")}
+
+        </button>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+  document.getElementById("galleryModal").classList.add("open");
+
+  document.body.style.overflow = "hidden";
 
 }
 
-function toggleProducts(id,button) {
+/* CERRAR LA VENTANILLA DE LA COLECCIÓN */
 
-  const gallery = document.getElementById(id);
+function closeGallery() {
 
-  gallery.classList.toggle("visible");
+  document.getElementById("galleryModal").classList.remove("open");
 
-  if(gallery.classList.contains("visible")) {
-
-    button.textContent = currentLanguage === "de" ? "PRODUKTE SCHLIESSEN" : "CERRAR PRODUCTOS";
-
-    gallery.scrollIntoView({behavior:"smooth",block:"start"});
-
-  } else {
-
-    button.textContent = t("viewProducts");
-
-  }
+  document.body.style.overflow = "";
 
 }
 
-function showDetails(code,image,name,collection) {
+function closeGalleryOutside(event) {
 
-  document.getElementById("modalImage").src = image;
+  if (event.target.id === "galleryModal") closeGallery();
 
-  document.getElementById("modalTitle").textContent = name;
+}
 
-  document.getElementById("modalCode").textContent = t("code")+": "+code;
+/* ABRIR LA FICHA DEL PRODUCTO ELEGIDO */
 
-  document.getElementById("modalDescription").textContent =
+function openDetail(index) {
 
-    t("description") + (collection ? " Colección " + collection + "." : "");
+  if (!activeCollection) return;
 
-  document.getElementById("modalPrice").textContent = t("price");
+  const product = activeCollection.products[index];
 
-  document.getElementById("modalWhatsApp").href = whatsappLink(code,name);
+  if (!product) return;
+
+  document.getElementById("detailTitle").textContent = product.name;
+
+  document.getElementById("detailImage").src =
+
+    asset(activeCollection.folder,product.file);
+
+  document.getElementById("detailImage").alt = product.name;
+
+  document.getElementById("detailCode").textContent =
+
+    t("code") + ": " + product.code;
+
+  document.getElementById("detailDescription").textContent =
+
+    t("description");
+
+  document.getElementById("detailPrice").textContent =
+
+    t("price");
+
+  document.getElementById("detailWhatsApp").href =
+
+    whatsappLink(product);
 
   document.getElementById("detailModal").classList.add("open");
 
 }
 
-function closeModal() {
+/* CERRAR LA FICHA INDIVIDUAL */
+
+function closeDetail() {
 
   document.getElementById("detailModal").classList.remove("open");
 
 }
 
-function closeOutside(event) {
+function closeDetailOutside(event) {
 
-  if(event.target.id === "detailModal") closeModal();
+  if (event.target.id === "detailModal") closeDetail();
 
 }
+
+/* CAMBIAR IDIOMA */
 
 function changeLanguage(lang) {
 
@@ -1210,37 +1266,33 @@ function changeLanguage(lang) {
 
   document.getElementById("footerText").textContent = t("footer");
 
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
+  document.querySelectorAll("[data-i18n]").forEach(el => {
 
     el.textContent = t(el.dataset.i18n);
 
   });
 
-  const visible = {};
+  if (activeCollection &&
 
-  ["mascaras","eyestay","sombras"].forEach(id=>{
+      document.getElementById("galleryModal").classList.contains("open")) {
 
-    visible[id] = document.getElementById(id).classList.contains("visible");
+    const id = Object.keys(collections).find(
 
-  });
+      key => collections[key] === activeCollection
 
-  renderProducts();
+    );
 
-  Object.keys(visible).forEach(id=>{
+    if (id) openGallery(id);
 
-    if(visible[id]) document.getElementById(id).classList.add("visible");
-
-  });
+  }
 
 }
 
-document.getElementById("language").addEventListener("change",function(){
+document.getElementById("language").addEventListener("change",function() {
 
   changeLanguage(this.value);
 
 });
-
-renderProducts();
 
 changeLanguage("de");
 
