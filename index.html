@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="de">
@@ -442,16 +440,6 @@ video {
 
 .detail-code {color:#777}
 
-.detail-price {
-
-  color:#9b7941;
-
-  font-size:21px;
-
-  font-weight:bold;
-
-}
-
 .detail-description {
 
   color:#555;
@@ -700,8 +688,6 @@ footer strong {color:var(--gold)}
 
     <p class="detail-description" id="detailDescription"></p>
 
-    <p class="detail-price" id="detailPrice"></p>
-
     <a class="btn btn-whatsapp" id="detailWhatsApp" href="#" target="_blank" rel="noopener" data-i18n="whatsapp">PEDIR POR WHATSAPP</a>
 
   </div>
@@ -729,24 +715,6 @@ const FOLDERS = {
 function asset(folder,file) {
 
   return ROOT + encodeURI(folder + file);
-
-}
-
-function makeProducts(start,count,prefix,folderPrefix,name) {
-
-  return Array.from({length:count},(_,i)=>({
-
-    code:prefix+(start+i),
-
-    file:folderPrefix+prefix+(start+i)+".PNG",
-
-    name:name,
-
-    price:null,
-
-    size:""
-
-  }));
 
 }
 
@@ -872,221 +840,241 @@ const translations = {
 
 es:{
 
-viewProducts:"VER PRODUCTO",details:"VER DETALLE",
+  viewProducts:"VER PRODUCTO",
 
-choose:"Elige el producto que deseas consultar.",
+  details:"VER DETALLE",
 
-code:"Artículo",price:"Consultar precio",
+  choose:"Elige el producto que deseas consultar.",
 
-description:"Consulta las características y disponibilidad de este producto. Para más información, escríbenos por WhatsApp.",
+  code:"Artículo",
 
-whatsapp:"PEDIR POR WHATSAPP",
+  description:"Consulta las características y disponibilidad de este producto. Para más información, escríbenos por WhatsApp.",
 
-header:"Belleza · Color · Elegancia",
+  whatsapp:"PEDIR POR WHATSAPP",
 
-intro:"Descubre el mundo del maquillaje",
+  header:"Belleza · Color · Elegancia",
 
-introText:"Una selección de maquillaje para expresar tu personalidad. Descubre nuestras colecciones y encuentra tus favoritos.",
+  intro:"Descubre el mundo del maquillaje",
 
-footer:"Pedidos y consultas por WhatsApp"
+  introText:"Una selección de maquillaje para expresar tu personalidad. Descubre nuestras colecciones y encuentra tus favoritos.",
+
+  footer:"Pedidos y consultas por WhatsApp"
 
 },
 
 de:{
 
-viewProducts:"PRODUKTE ANSEHEN",details:"DETAILS ANSEHEN",
+  viewProducts:"PRODUKTE ANSEHEN",
 
-choose:"Wähle das Produkt aus, über das du mehr erfahren möchtest.",
+  details:"DETAILS ANSEHEN",
 
-code:"Artikel",price:"Preis auf Anfrage",
+  choose:"Wähle das Produkt aus, über das du mehr erfahren möchtest.",
 
-description:"Erfahre mehr über Eigenschaften und Verfügbarkeit. Kontaktiere uns gerne per WhatsApp.",
+  code:"Artikel",
 
-whatsapp:"PER WHATSAPP BESTELLEN",
+  description:"Erfahre mehr über Eigenschaften und Verfügbarkeit. Kontaktiere uns gerne per WhatsApp.",
 
-header:"Schönheit · Farbe · Eleganz",
+  whatsapp:"PER WHATSAPP BESTELLEN",
 
-intro:"Entdecke die Welt des Make-ups",
+  header:"Schönheit · Farbe · Eleganz",
 
-introText:"Entdecke unsere Make-up-Kollektionen und finde deine Lieblingsprodukte.",
+  intro:"Entdecke die Welt des Make-ups",
 
-footer:"Bestellungen und Anfragen per WhatsApp"
+  introText:"Entdecke unsere Make-up-Kollektionen und finde deine Lieblingsprodukte.",
+
+  footer:"Bestellungen und Anfragen per WhatsApp"
 
 },
 
 it:{
 
-viewProducts:"VEDI PRODOTTI",details:"VEDI DETTAGLI",
+  viewProducts:"VEDI PRODOTTI",
 
-choose:"Scegli il prodotto che desideri conoscere.",
+  details:"VEDI DETTAGLI",
 
-code:"Articolo",price:"Prezzo su richiesta",
+  choose:"Scegli il prodotto che desideri conoscere.",
 
-description:"Scopri le caratteristiche e la disponibilità del prodotto. Contattaci su WhatsApp.",
+  code:"Articolo",
 
-whatsapp:"ORDINA SU WHATSAPP",
+  description:"Scopri le caratteristiche e la disponibilità del prodotto. Contattaci su WhatsApp.",
 
-header:"Bellezza · Colore · Eleganza",
+  whatsapp:"ORDINA SU WHATSAPP",
 
-intro:"Scopri il mondo del make-up",
+  header:"Bellezza · Colore · Eleganza",
 
-introText:"Scopri le nostre collezioni e trova i tuoi prodotti preferiti.",
+  intro:"Scopri il mondo del make-up",
 
-footer:"Ordini e informazioni su WhatsApp"
+  introText:"Scopri le nostre collezioni e trova i tuoi prodotti preferiti.",
+
+  footer:"Ordini e informazioni su WhatsApp"
 
 },
 
 tr:{
 
-viewProducts:"ÜRÜNLERİ GÖR",details:"DETAYLARI GÖR",
+  viewProducts:"ÜRÜNLERİ GÖR",
 
-choose:"İlgilendiğiniz ürünü seçin.",
+  details:"DETAYLARI GÖR",
 
-code:"Ürün kodu",price:"Fiyat için sorunuz",
+  choose:"İlgilendiğiniz ürünü seçin.",
 
-description:"Ürünün özellikleri ve stok durumu için WhatsApp üzerinden bize ulaşın.",
+  code:"Ürün kodu",
 
-whatsapp:"WHATSAPP'TAN SİPARİŞ",
+  description:"Ürünün özellikleri ve stok durumu için WhatsApp üzerinden bize ulaşın.",
 
-header:"Güzellik · Renk · Zarafet",
+  whatsapp:"WHATSAPP'TAN SİPARİŞ",
 
-intro:"Makyaj dünyasını keşfet",
+  header:"Güzellik · Renk · Zarafet",
 
-introText:"Makyaj koleksiyonlarımızı keşfedin ve favori ürünlerinizi bulun.",
+  intro:"Makyaj dünyasını keşfet",
 
-footer:"Sipariş ve bilgi için WhatsApp"
+  introText:"Makyaj koleksiyonlarımızı keşfedin ve favori ürünlerinizi bulun.",
+
+  footer:"Sipariş ve bilgi için WhatsApp"
 
 },
 
 ru:{
 
-viewProducts:"СМОТРЕТЬ ТОВАРЫ",details:"ПОДРОБНЕЕ",
+  viewProducts:"СМОТРЕТЬ ТОВАРЫ",
 
-choose:"Выберите интересующий вас товар.",
+  details:"ПОДРОБНЕЕ",
 
-code:"Артикул",price:"Цена по запросу",
+  choose:"Выберите интересующий вас товар.",
 
-description:"Узнайте характеристики и наличие товара через WhatsApp.",
+  code:"Артикул",
 
-whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
+  description:"Узнайте характеристики и наличие товара через WhatsApp.",
 
-header:"Красота · Цвет · Элегантность",
+  whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
 
-intro:"Откройте мир макияжа",
+  header:"Красота · Цвет · Элегантность",
 
-introText:"Откройте наши коллекции макияжа и выберите любимые продукты.",
+  intro:"Откройте мир макияжа",
 
-footer:"Заказы и вопросы через WhatsApp"
+  introText:"Откройте наши коллекции макияжа и выберите любимые продукты.",
+
+  footer:"Заказы и вопросы через WhatsApp"
 
 },
 
 pt:{
 
-viewProducts:"VER PRODUTOS",details:"VER DETALHES",
+  viewProducts:"VER PRODUTOS",
 
-choose:"Escolha o produto que deseja consultar.",
+  details:"VER DETALHES",
 
-code:"Artigo",price:"Preço sob consulta",
+  choose:"Escolha o produto que deseja consultar.",
 
-description:"Consulte as características e disponibilidade deste produto pelo WhatsApp.",
+  code:"Artigo",
 
-whatsapp:"ENCOMENDAR PELO WHATSAPP",
+  description:"Consulte as características e disponibilidade deste produto pelo WhatsApp.",
 
-header:"Beleza · Cor · Elegância",
+  whatsapp:"ENCOMENDAR PELO WHATSAPP",
 
-intro:"Descubra o mundo da maquilhagem",
+  header:"Beleza · Cor · Elegância",
 
-introText:"Descubra as nossas coleções e encontre os seus produtos favoritos.",
+  intro:"Descubra o mundo da maquilhagem",
 
-footer:"Encomendas e informações pelo WhatsApp"
+  introText:"Descubra as nossas coleções e encontre os seus produtos favoritos.",
+
+  footer:"Encomendas e informações pelo WhatsApp"
 
 },
 
 sq:{
 
-viewProducts:"SHIKO PRODUKTET",details:"SHIKO DETAJET",
+  viewProducts:"SHIKO PRODUKTET",
 
-choose:"Zgjidhni produktin që dëshironi të konsultoni.",
+  details:"SHIKO DETAJET",
 
-code:"Artikulli",price:"Çmimi sipas kërkesës",
+  choose:"Zgjidhni produktin që dëshironi të konsultoni.",
 
-description:"Për karakteristikat dhe disponueshmërinë na kontaktoni në WhatsApp.",
+  code:"Artikulli",
 
-whatsapp:"POROSIT NË WHATSAPP",
+  description:"Për karakteristikat dhe disponueshmërinë na kontaktoni në WhatsApp.",
 
-header:"Bukuri · Ngjyra · Elegancë",
+  whatsapp:"POROSIT NË WHATSAPP",
 
-intro:"Zbuloni botën e makijazhit",
+  header:"Bukuri · Ngjyra · Elegancë",
 
-introText:"Zbuloni koleksionet tona të makijazhit dhe produktet tuaja të preferuara.",
+  intro:"Zbuloni botën e makijazhit",
 
-footer:"Porosi dhe informacione në WhatsApp"
+  introText:"Zbuloni koleksionet tona të makijazhit dhe produktet tuaja të preferuara.",
+
+  footer:"Porosi dhe informacione në WhatsApp"
 
 },
 
 en:{
 
-viewProducts:"VIEW PRODUCTS",details:"VIEW DETAILS",
+  viewProducts:"VIEW PRODUCTS",
 
-choose:"Choose the product you would like to discover.",
+  details:"VIEW DETAILS",
 
-code:"Article",price:"Price on request",
+  choose:"Choose the product you would like to discover.",
 
-description:"Contact us on WhatsApp for product information and availability.",
+  code:"Article",
 
-whatsapp:"ORDER VIA WHATSAPP",
+  description:"Contact us on WhatsApp for product information and availability.",
 
-header:"Beauty · Colour · Elegance",
+  whatsapp:"ORDER VIA WHATSAPP",
 
-intro:"Discover the world of makeup",
+  header:"Beauty · Colour · Elegance",
 
-introText:"Explore our makeup collections and find your favourites.",
+  intro:"Discover the world of makeup",
 
-footer:"Orders and enquiries via WhatsApp"
+  introText:"Explore our makeup collections and find your favourites.",
+
+  footer:"Orders and enquiries via WhatsApp"
 
 },
 
 fr:{
 
-viewProducts:"VOIR LES PRODUITS",details:"VOIR LES DÉTAILS",
+  viewProducts:"VOIR LES PRODUITS",
 
-choose:"Choisissez le produit qui vous intéresse.",
+  details:"VOIR LES DÉTAILS",
 
-code:"Article",price:"Prix sur demande",
+  choose:"Choisissez le produit qui vous intéresse.",
 
-description:"Contactez-nous sur WhatsApp pour connaître les caractéristiques et la disponibilité.",
+  code:"Article",
 
-whatsapp:"COMMANDER SUR WHATSAPP",
+  description:"Contactez-nous sur WhatsApp pour connaître les caractéristiques et la disponibilité.",
 
-header:"Beauté · Couleur · Élégance",
+  whatsapp:"COMMANDER SUR WHATSAPP",
 
-intro:"Découvrez le monde du maquillage",
+  header:"Beauté · Couleur · Élégance",
 
-introText:"Découvrez nos collections de maquillage et trouvez vos produits préférés.",
+  intro:"Découvrez le monde du maquillage",
 
-footer:"Commandes et renseignements par WhatsApp"
+  introText:"Découvrez nos collections de maquillage et trouvez vos produits préférés.",
+
+  footer:"Commandes et renseignements par WhatsApp"
 
 },
 
 pl:{
 
-viewProducts:"ZOBACZ PRODUKTY",details:"ZOBACZ SZCZEGÓŁY",
+  viewProducts:"ZOBACZ PRODUKTY",
 
-choose:"Wybierz produkt, który Cię interesuje.",
+  details:"ZOBACZ SZCZEGÓŁY",
 
-code:"Artykuł",price:"Cena na zapytanie",
+  choose:"Wybierz produkt, który Cię interesuje.",
 
-description:"Skontaktuj się z nami przez WhatsApp, aby uzyskać informacje o produkcie.",
+  code:"Artykuł",
 
-whatsapp:"ZAMÓW PRZEZ WHATSAPP",
+  description:"Skontaktuj się z nami przez WhatsApp, aby uzyskać informacje o produkcie.",
 
-header:"Piękno · Kolor · Elegancja",
+  whatsapp:"ZAMÓW PRZEZ WHATSAPP",
 
-intro:"Odkryj świat makijażu",
+  header:"Piękno · Kolor · Elegancja",
 
-introText:"Odkryj nasze kolekcje makijażu i znajdź swoje ulubione produkty.",
+  intro:"Odkryj świat makijażu",
 
-footer:"Zamówienia i pytania przez WhatsApp"
+  introText:"Odkryj nasze kolekcje makijażu i znajdź swoje ulubione produkty.",
+
+  footer:"Zamówienia i pytania przez WhatsApp"
 
 }
 
@@ -1098,181 +1086,177 @@ let activeCollection=null;
 
 function t(key) {
 
- return translations[currentLanguage][key] || translations.es[key] || key;
+  return translations[currentLanguage][key] || translations.es[key] || key;
 
 }
 
 function whatsappLink(product) {
 
- const message="Hola, quisiera información sobre "+product.name+
+  const message="Hola, quisiera información sobre "+product.name+
 
- ", artículo "+product.code+".";
+  ", artículo "+product.code+".";
 
- return "https://wa.me/"+WA+"?text="+encodeURIComponent(message);
+  return "https://wa.me/"+WA+"?text="+encodeURIComponent(message);
 
 }
 
 function openGallery(id) {
 
- const collection=collections[id];
+  const collection=collections[id];
 
- if(!collection) return;
+  if(!collection) return;
 
- activeCollection=collection;
+  activeCollection=collection;
 
- document.getElementById("galleryTitle").textContent=collection.title;
+  document.getElementById("galleryTitle").textContent=collection.title;
 
- document.getElementById("galleryInstruction").textContent=t("choose");
+  document.getElementById("galleryInstruction").textContent=t("choose");
 
- const overview=document.getElementById("galleryOverview");
+  const overview=document.getElementById("galleryOverview");
 
- overview.src=asset(collection.folder,collection.overview);
+  overview.src=asset(collection.folder,collection.overview);
 
- overview.alt=collection.title;
+  overview.alt=collection.title;
 
- const grid=document.getElementById("galleryProducts");
+  const grid=document.getElementById("galleryProducts");
 
- grid.innerHTML=collection.products.map((product,index)=>{
+  grid.innerHTML=collection.products.map((product,index)=>{
 
- const image=asset(collection.folder,product.file);
+    const image=asset(collection.folder,product.file);
 
- return `
+    return `
 
- <article class="product">
+      <article class="product">
 
- <img src="${image}" loading="lazy" alt="${product.name} ${product.code}"
+        <img src="${image}" loading="lazy" alt="${product.name} ${product.code}"
 
- onerror="this.style.display='none'">
+        onerror="this.style.display='none'">
 
- <h3>${product.name}</h3>
+        <h3>${product.name}</h3>
 
- <p>${t("code")}: ${product.code}</p>
+        <p>${t("code")}: ${product.code}</p>
 
- <button type="button" class="detail-btn"
+        <button type="button" class="detail-btn"
 
- onclick="openDetail(${index})">${t("details")}</button>
+        onclick="openDetail(${index})">${t("details")}</button>
 
- </article>`;
+      </article>`;
 
- }).join("");
+  }).join("");
 
- document.getElementById("galleryModal").classList.add("open");
+  document.getElementById("galleryModal").classList.add("open");
 
- document.body.style.overflow="hidden";
+  document.body.style.overflow="hidden";
 
 }
 
 function closeGallery() {
 
- document.getElementById("galleryModal").classList.remove("open");
+  document.getElementById("galleryModal").classList.remove("open");
 
- document.body.style.overflow="";
+  document.body.style.overflow="";
 
 }
 
 function closeGalleryOutside(event) {
 
- if(event.target.id==="galleryModal") closeGallery();
+  if(event.target.id==="galleryModal") closeGallery();
 
 }
 
 function openDetail(index) {
 
- if(!activeCollection) return;
+  if(!activeCollection) return;
 
- const product=activeCollection.products[index];
+  const product=activeCollection.products[index];
 
- if(!product) return;
+  if(!product) return;
 
- document.getElementById("detailTitle").textContent=product.name;
+  document.getElementById("detailTitle").textContent=product.name;
 
- document.getElementById("detailImage").src=
+  document.getElementById("detailImage").src=
 
- asset(activeCollection.folder,product.file);
+  asset(activeCollection.folder,product.file);
 
- document.getElementById("detailCode").textContent=
+  document.getElementById("detailCode").textContent=
 
- t("code")+": "+product.code;
+  t("code")+": "+product.code;
 
- document.getElementById("detailDescription").textContent=
+  document.getElementById("detailDescription").textContent=
 
- t("description");
+  t("description");
 
- document.getElementById("detailPrice").textContent=
+  document.getElementById("detailWhatsApp").href=
 
- product.price || t("price");
+  whatsappLink(product);
 
- document.getElementById("detailWhatsApp").href=
-
- whatsappLink(product);
-
- document.getElementById("detailModal").classList.add("open");
+  document.getElementById("detailModal").classList.add("open");
 
 }
 
 function closeDetail() {
 
- document.getElementById("detailModal").classList.remove("open");
+  document.getElementById("detailModal").classList.remove("open");
 
 }
 
 function closeDetailOutside(event) {
 
- if(event.target.id==="detailModal") closeDetail();
+  if(event.target.id==="detailModal") closeDetail();
 
 }
 
 function changeLanguage(lang) {
 
- currentLanguage=lang;
+  currentLanguage=lang;
 
- document.documentElement.lang=lang;
+  document.documentElement.lang=lang;
 
- document.getElementById("headerSubtitle").textContent=t("header");
+  document.getElementById("headerSubtitle").textContent=t("header");
 
- document.getElementById("introTitle").textContent=t("intro");
+  document.getElementById("introTitle").textContent=t("intro");
 
- document.getElementById("introText").textContent=t("introText");
+  document.getElementById("introText").textContent=t("introText");
 
- document.getElementById("footerText").textContent=t("footer");
+  document.getElementById("footerText").textContent=t("footer");
 
- document.querySelectorAll("[data-i18n]").forEach(el=>{
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
 
- el.textContent=t(el.dataset.i18n);
+    el.textContent=t(el.dataset.i18n);
 
- });
+  });
 
- if(activeCollection &&
+  if(activeCollection &&
 
- document.getElementById("galleryModal").classList.contains("open")) {
+  document.getElementById("galleryModal").classList.contains("open")) {
 
- const id=Object.keys(collections).find(
+    const id=Object.keys(collections).find(
 
- key=>collections[key]===activeCollection
+      key=>collections[key]===activeCollection
 
- );
+    );
 
- if(id) openGallery(id);
+    if(id) openGallery(id);
 
- }
+  }
 
 }
 
 document.getElementById("language").addEventListener("change",function(){
 
- changeLanguage(this.value);
+  changeLanguage(this.value);
 
 });
 
 document.addEventListener("keydown",function(event){
 
- if(event.key==="Escape") {
+  if(event.key==="Escape") {
 
- closeDetail();
+    closeDetail();
 
- closeGallery();
+    closeGallery();
 
- }
+  }
 
 });
 
