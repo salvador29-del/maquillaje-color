@@ -8,27 +8,93 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="theme-color" content="#17251d">
+<meta name="theme-color" content="#f5dce5">
 
 <title>Make-up und Farben | Parfüm und Düfte Perez</title>
 
 <style>
 
-:root{--green:#244b36;--gold:#c5a66b;--cream:#faf8f3;--dark:#20251f}
+:root{
+
+--green:#244b36;
+
+--gold:#c5a66b;
+
+--cream:#faf8f3;
+
+--dark:#20251f;
+
+--pink:#f3dce5;
+
+}
 
 *{box-sizing:border-box}
 
-body{margin:0;font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--dark)}
+body{
 
-header{background:linear-gradient(135deg,#14251b,#31543d);color:white;text-align:center;padding:65px 15px 35px;position:relative}
+margin:0;
 
-header h1{font-size:clamp(27px,6vw,46px);font-weight:normal;letter-spacing:3px}
+font-family:Georgia,'Times New Roman',serif;
 
-header p{color:#e6d5ae;letter-spacing:2px}
+background:var(--cream);
 
-.globe{position:absolute;right:12px;top:12px;border:1px solid var(--gold);border-radius:25px;padding:8px}
+color:var(--dark)
 
-.globe select{background:transparent;color:white;border:0;max-width:110px}
+}
+
+header{
+
+background:linear-gradient(135deg,#f8e8ed,#e9c5d3);
+
+color:#513746;
+
+text-align:center;
+
+padding:65px 15px 35px;
+
+position:relative
+
+}
+
+header h1{
+
+font-size:clamp(27px,6vw,46px);
+
+font-weight:normal;
+
+letter-spacing:3px
+
+}
+
+header p{color:#80566b;letter-spacing:2px}
+
+.globe{
+
+position:absolute;
+
+right:12px;
+
+top:12px;
+
+border:1px solid var(--gold);
+
+border-radius:25px;
+
+padding:8px
+
+}
+
+.globe select{
+
+background:transparent;
+
+color:#513746;
+
+border:0;
+
+max-width:110px
+
+}
 
 .globe option{color:#222}
 
@@ -36,59 +102,329 @@ header p{color:#e6d5ae;letter-spacing:2px}
 
 .intro h2{color:var(--green);font-weight:normal}
 
-.intro p{max-width:700px;margin:auto;line-height:1.7;color:#666}
+.intro p{
 
-.separator{width:100px;height:2px;background:var(--gold);margin:35px auto}
+max-width:700px;
 
-.collection{max-width:1100px;margin:35px auto;padding:20px 18px}
+margin:auto;
 
-.collection-title{text-align:center;color:var(--green);font-size:27px;font-weight:normal}
+line-height:1.7;
 
-.collection-subtitle{text-align:center;color:#92794c;letter-spacing:1px;margin-bottom:25px}
+color:#666
 
-.video-frame{max-width:850px;margin:20px auto;background:#111;border:2px solid var(--gold);border-radius:12px;overflow:hidden}
+}
 
-video{display:block;width:100%;max-height:520px;background:#111}
+.separator{
+
+width:100px;
+
+height:2px;
+
+background:var(--gold);
+
+margin:35px auto
+
+}
+
+.collection{
+
+max-width:1100px;
+
+margin:35px auto;
+
+padding:20px 18px
+
+}
+
+.collection-title{
+
+text-align:center;
+
+color:var(--green);
+
+font-size:27px;
+
+font-weight:normal
+
+}
+
+.collection-subtitle{
+
+text-align:center;
+
+color:#92794c;
+
+letter-spacing:1px;
+
+margin-bottom:25px
+
+}
+
+.video-frame{
+
+max-width:850px;
+
+margin:20px auto;
+
+background:#111;
+
+border:2px solid var(--gold);
+
+border-radius:12px;
+
+overflow:hidden
+
+}
+
+video{
+
+display:block;
+
+width:100%;
+
+max-height:520px;
+
+background:#111
+
+}
 
 .action{text-align:center;margin:22px 0}
 
-.btn{display:inline-block;border:0;border-radius:30px;padding:13px 25px;background:var(--green);color:white;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1px;cursor:pointer}
+.btn{
+
+display:inline-block;
+
+border:0;
+
+border-radius:30px;
+
+padding:13px 25px;
+
+background:var(--green);
+
+color:white;
+
+text-decoration:none;
+
+font-family:Arial,sans-serif;
+
+font-size:12px;
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+cursor:pointer
+
+}
 
 .btn:hover{background:#3b694b}
 
-.btn-whatsapp{display:block;background:#218c50;margin-top:14px}
+.btn-whatsapp{
 
-.shadow-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:25px auto}
+display:block;
+
+background:#218c50;
+
+margin-top:14px
+
+}
+
+.shadow-buttons{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:12px;
+
+margin:25px auto
+
+}
 
 .shadow-buttons .btn{min-width:190px}
 
-.modal{display:none;position:fixed;inset:0;background:#000b;z-index:1000;padding:12px;overflow-y:auto;align-items:center;justify-content:center}
+.modal{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:#000b;
+
+z-index:1000;
+
+padding:12px;
+
+overflow-y:auto;
+
+align-items:center;
+
+justify-content:center
+
+}
 
 .modal.open{display:flex}
 
-.modal-content{background:var(--cream);max-width:950px;width:100%;max-height:94vh;overflow-y:auto;border-radius:15px;padding:20px;border:2px solid var(--gold);text-align:center}
+.modal-content{
+
+background:var(--cream);
+
+max-width:950px;
+
+width:100%;
+
+max-height:94vh;
+
+overflow-y:auto;
+
+border-radius:15px;
+
+padding:20px;
+
+border:2px solid var(--gold);
+
+text-align:center
+
+}
 
 .detail-content{max-width:480px}
 
-.close{position:sticky;float:right;top:0;z-index:5;width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;background:white;font-size:25px;cursor:pointer}
+.close{
+
+position:sticky;
+
+float:right;
+
+top:0;
+
+z-index:5;
+
+width:38px;
+
+height:38px;
+
+border:1px solid var(--gold);
+
+border-radius:50%;
+
+background:white;
+
+font-size:25px;
+
+cursor:pointer
+
+}
 
 .modal-title{color:var(--green);font-weight:normal}
 
-.overview-image{width:100%;max-width:650px;height:auto;object-fit:contain;border:1px solid #e5d7bd;border-radius:10px;background:white;margin:8px auto 20px}
+.overview-image{
 
-.modal-products{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:20px 0}
+width:100%;
 
-.product{background:white;border:1px solid #e8dfcf;border-radius:12px;padding:12px;text-align:center;box-shadow:0 4px 15px #0000000c}
+max-width:650px;
 
-.product img{width:100%;height:165px;object-fit:contain;background:white}
+height:auto;
+
+object-fit:contain;
+
+border:1px solid #e5d7bd;
+
+border-radius:10px;
+
+background:white;
+
+margin:8px auto 20px
+
+}
+
+.modal-products{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
+
+gap:14px;
+
+margin:20px 0
+
+}
+
+.product{
+
+background:white;
+
+border:1px solid #e8dfcf;
+
+border-radius:12px;
+
+padding:12px;
+
+text-align:center;
+
+box-shadow:0 4px 15px #0000000c
+
+}
+
+.product img{
+
+width:100%;
+
+height:165px;
+
+object-fit:contain;
+
+background:white
+
+}
 
 .product h3{color:var(--green);font-size:15px}
 
-.product p{color:#777;font-family:Arial,sans-serif;font-size:13px}
+.product p{
 
-.detail-btn{background:#eee8dc;color:#55442a;border:0;padding:10px 17px;border-radius:25px;cursor:pointer;margin:8px 0;font-weight:bold}
+color:#777;
 
-.detail-content .detail-image{width:100%;max-height:300px;object-fit:contain;background:white}
+font-family:Arial,sans-serif;
+
+font-size:13px
+
+}
+
+.detail-btn{
+
+background:#eee8dc;
+
+color:#55442a;
+
+border:0;
+
+padding:10px 17px;
+
+border-radius:25px;
+
+cursor:pointer;
+
+margin:8px 0;
+
+font-weight:bold
+
+}
+
+.detail-content .detail-image{
+
+width:100%;
+
+max-height:300px;
+
+object-fit:contain;
+
+background:white
+
+}
 
 .detail-content h2{color:var(--green)}
 
@@ -96,7 +432,19 @@ video{display:block;width:100%;max-height:520px;background:#111}
 
 .detail-description{color:#555;line-height:1.7}
 
-footer{background:#17251d;color:white;text-align:center;padding:35px 15px;line-height:1.8}
+footer{
+
+background:#17251d;
+
+color:white;
+
+text-align:center;
+
+padding:35px 15px;
+
+line-height:1.8
+
+}
 
 footer strong{color:var(--gold)}
 
@@ -172,6 +520,8 @@ footer strong{color:var(--gold)}
 
 <div class="separator"></div>
 
+<!-- MÁSCARAS DE PESTAÑAS -->
+
 <section class="collection">
 
 <h2 class="collection-title" data-i18n="mascaraTitle"></h2>
@@ -198,6 +548,8 @@ footer strong{color:var(--gold)}
 
 <div class="separator"></div>
 
+<!-- EXTRA EYESTAY -->
+
 <section class="collection">
 
 <h2 class="collection-title" data-i18n="eyeTitle"></h2>
@@ -223,6 +575,8 @@ footer strong{color:var(--gold)}
 </section>
 
 <div class="separator"></div>
+
+<!-- SOMBRAS EN POLVO PRENSADO -->
 
 <section class="collection">
 
@@ -252,6 +606,34 @@ footer strong{color:var(--gold)}
 
 </section>
 
+<div class="separator"></div>
+
+<!-- NUEVA GAMA DIAMOND CREAM -->
+
+<section class="collection">
+
+<h2 class="collection-title" data-i18n="diamondTitle"></h2>
+
+<p class="collection-subtitle" data-i18n="diamondSub"></p>
+
+<div class="video-frame">
+
+<video controls playsinline preload="metadata">
+
+<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/04_Sombra_de_ojos_Diamond_Cream/diamond_cream_tres_tonos_30s.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<div class="action">
+
+<button class="btn" onclick="openGallery('diamond')" data-i18n="viewProducts"></button>
+
+</div>
+
+</section>
+
 <footer>
 
 <strong>PARFÜM UND DÜFTE PEREZ</strong>
@@ -267,6 +649,8 @@ footer strong{color:var(--gold)}
 <small>© 2026 Parfüm und Düfte Perez</small>
 
 </footer>
+
+<!-- GALERÍA -->
 
 <div class="modal" id="galleryModal" onclick="closeGalleryOutside(event)">
 
@@ -285,6 +669,8 @@ footer strong{color:var(--gold)}
 </div>
 
 </div>
+
+<!-- DETALLE -->
 
 <div class="modal" id="detailModal" onclick="closeDetailOutside(event)">
 
@@ -318,11 +704,11 @@ mascara:"01_maquillajes_ojos/01_Coleccion_Mascaras_Pestanas/",
 
 eye:"01_maquillajes_ojos/02_ Extra_EyeStay/",
 
-shadow:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/"
+shadow:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/",
+
+diamond:"04_Sombra_de_ojos_Diamond_Cream/"
 
 };
-
-// Corrección de las rutas: codifica los espacios de cada carpeta y archivo.
 
 function asset(folder,file){
 
@@ -440,6 +826,18 @@ file:"coleccion-3-MKOM"+(26+i)+".PNG"
 
 }))
 
+},
+
+diamond:{
+
+titleKey:"diamondTitle",
+
+folder:FOLDERS.diamond,
+
+overview:"sombra-de-ojo-todo-junto.PNG",
+
+products:[]
+
 }
 
 };
@@ -476,6 +874,10 @@ shadow2:"KOLLEKTION 2 · 10 FARBEN",
 
 shadow3:"KOLLEKTION 3 · 10 FARBEN",
 
+diamondTitle:"Diamond Cream – Lidschatten",
+
+diamondSub:"DREI ELEGANTE FARBNUANCEN",
+
 viewProducts:"PRODUKTE ANSEHEN",
 
 details:"DETAILS ANSEHEN",
@@ -491,6 +893,8 @@ whatsapp:"PER WHATSAPP BESTELLEN",
 mascaraName:"Wimperntusche",
 
 shadowName:"Gepresster Lidschatten",
+
+diamondName:"Diamond Cream – Lidschatten",
 
 close:"Schließen"
 
@@ -526,6 +930,10 @@ shadow2:"COLECCIÓN 2 · 10 TONOS",
 
 shadow3:"COLECCIÓN 3 · 10 TONOS",
 
+diamondTitle:"Sombras de ojos Diamond Cream",
+
+diamondSub:"TRES TONOS ELEGANTES",
+
 viewProducts:"VER PRODUCTO",
 
 details:"VER DETALLE",
@@ -541,6 +949,8 @@ whatsapp:"PEDIR POR WHATSAPP",
 mascaraName:"Máscara de pestañas",
 
 shadowName:"Sombra de ojos en polvo prensado",
+
+diamondName:"Sombra de ojos Diamond Cream",
 
 close:"Cerrar"
 
@@ -576,6 +986,10 @@ shadow2:"COLLEZIONE 2 · 10 TONALITÀ",
 
 shadow3:"COLLEZIONE 3 · 10 TONALITÀ",
 
+diamondTitle:"Ombretto Diamond Cream",
+
+diamondSub:"TRE TONALITÀ ELEGANTI",
+
 viewProducts:"VEDI PRODOTTI",
 
 details:"VEDI DETTAGLI",
@@ -591,6 +1005,8 @@ whatsapp:"ORDINA SU WHATSAPP",
 mascaraName:"Mascara",
 
 shadowName:"Ombretto in polvere compatta",
+
+diamondName:"Ombretto Diamond Cream",
 
 close:"Chiudi"
 
@@ -626,6 +1042,10 @@ shadow2:"2. KOLEKSİYON · 10 TON",
 
 shadow3:"3. KOLEKSİYON · 10 TON",
 
+diamondTitle:"Diamond Cream Göz Farı",
+
+diamondSub:"ÜÇ ŞIK RENK",
+
 viewProducts:"ÜRÜNLERİ GÖR",
 
 details:"DETAYLARI GÖR",
@@ -641,6 +1061,8 @@ whatsapp:"WHATSAPP'TAN SİPARİŞ",
 mascaraName:"Kirpik Maskarası",
 
 shadowName:"Preslenmiş Toz Göz Farı",
+
+diamondName:"Diamond Cream Göz Farı",
 
 close:"Kapat"
 
@@ -676,6 +1098,10 @@ shadow2:"КОЛЛЕКЦИЯ 2 · 10 ОТТЕНКОВ",
 
 shadow3:"КОЛЛЕКЦИЯ 3 · 10 ОТТЕНКОВ",
 
+diamondTitle:"Тени для век Diamond Cream",
+
+diamondSub:"ТРИ ЭЛЕГАНТНЫХ ОТТЕНКА",
+
 viewProducts:"СМОТРЕТЬ ТОВАРЫ",
 
 details:"ПОДРОБНЕЕ",
@@ -691,6 +1117,8 @@ whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
 mascaraName:"Тушь для ресниц",
 
 shadowName:"Прессованные тени для век",
+
+diamondName:"Тени для век Diamond Cream",
 
 close:"Закрыть"
 
@@ -726,6 +1154,10 @@ shadow2:"COLEÇÃO 2 · 10 TONS",
 
 shadow3:"COLEÇÃO 3 · 10 TONS",
 
+diamondTitle:"Sombras Diamond Cream",
+
+diamondSub:"TRÊS TONS ELEGANTES",
+
 viewProducts:"VER PRODUTOS",
 
 details:"VER DETALHES",
@@ -741,6 +1173,8 @@ whatsapp:"ENCOMENDAR PELO WHATSAPP",
 mascaraName:"Máscara de pestanas",
 
 shadowName:"Sombra em pó compacto",
+
+diamondName:"Sombra Diamond Cream",
 
 close:"Fechar"
 
@@ -776,6 +1210,10 @@ shadow2:"KOLEKSIONI 2 · 10 NUANCA",
 
 shadow3:"KOLEKSIONI 3 · 10 NUANCA",
 
+diamondTitle:"Hije sysh Diamond Cream",
+
+diamondSub:"TRE NUANCA ELEGANTE",
+
 viewProducts:"SHIKO PRODUKTET",
 
 details:"SHIKO DETAJET",
@@ -791,6 +1229,8 @@ whatsapp:"POROSIT NË WHATSAPP",
 mascaraName:"Maskara për qerpikë",
 
 shadowName:"Hije sysh në pluhur të presuar",
+
+diamondName:"Hije sysh Diamond Cream",
 
 close:"Mbyll"
 
@@ -826,6 +1266,10 @@ shadow2:"COLLECTION 2 · 10 SHADES",
 
 shadow3:"COLLECTION 3 · 10 SHADES",
 
+diamondTitle:"Diamond Cream Eyeshadow",
+
+diamondSub:"THREE ELEGANT SHADES",
+
 viewProducts:"VIEW PRODUCTS",
 
 details:"VIEW DETAILS",
@@ -841,6 +1285,8 @@ whatsapp:"ORDER VIA WHATSAPP",
 mascaraName:"Mascara",
 
 shadowName:"Pressed powder eyeshadow",
+
+diamondName:"Diamond Cream Eyeshadow",
 
 close:"Close"
 
@@ -876,6 +1322,10 @@ shadow2:"COLLECTION 2 · 10 TEINTES",
 
 shadow3:"COLLECTION 3 · 10 TEINTES",
 
+diamondTitle:"Fards Diamond Cream",
+
+diamondSub:"TROIS TEINTES ÉLÉGANTES",
+
 viewProducts:"VOIR LES PRODUITS",
 
 details:"VOIR LES DÉTAILS",
@@ -891,6 +1341,8 @@ whatsapp:"COMMANDER SUR WHATSAPP",
 mascaraName:"Mascara",
 
 shadowName:"Fard à paupières en poudre pressée",
+
+diamondName:"Fard à paupières Diamond Cream",
 
 close:"Fermer"
 
@@ -926,6 +1378,10 @@ shadow2:"KOLEKCJA 2 · 10 ODCIENI",
 
 shadow3:"KOLEKCJA 3 · 10 ODCIENI",
 
+diamondTitle:"Cienie Diamond Cream",
+
+diamondSub:"TRZY ELEGANCKIE ODCIENIE",
+
 viewProducts:"ZOBACZ PRODUKTY",
 
 details:"ZOBACZ SZCZEGÓŁY",
@@ -941,6 +1397,8 @@ whatsapp:"ZAMÓW PRZEZ WHATSAPP",
 mascaraName:"Tusz do rzęs",
 
 shadowName:"Prasowany cień do powiek",
+
+diamondName:"Cień do powiek Diamond Cream",
 
 close:"Zamknij"
 
@@ -965,6 +1423,8 @@ if(product.name)return product.name;
 if(product.code.startsWith("MKOM"))return t("shadowName");
 
 if(product.code.startsWith("MM07"))return t("mascaraName");
+
+if(product.code.startsWith("DC"))return t("diamondName");
 
 return "Extra EyeStay";
 
@@ -1014,6 +1474,12 @@ this.style.display="block";
 
 const grid=document.getElementById("galleryProducts");
 
+if(collection.products.length===0){
+
+grid.innerHTML="";
+
+}else{
+
 grid.innerHTML=collection.products.map((product,index)=>{
 
 const image=asset(collection.folder,product.file);
@@ -1037,6 +1503,8 @@ return `
 `;
 
 }).join("");
+
+}
 
 document.getElementById("galleryModal").classList.add("open");
 
