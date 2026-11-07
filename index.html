@@ -126,9 +126,7 @@ footer strong{color:var(--gold)}
 
 <header>
 
-<div class="globe">
-
-🌐
+<div class="globe">🌐
 
 <select id="language" aria-label="Sprache wählen">
 
@@ -324,9 +322,13 @@ shadow:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/"
 
 };
 
+// Corrección de las rutas: codifica los espacios de cada carpeta y archivo.
+
 function asset(folder,file){
 
-return ROOT+encodeURI(folder+file);
+const encodedFolder=folder.split("/").map(part=>encodeURIComponent(part)).join("/");
+
+return ROOT+encodedFolder+encodeURIComponent(file);
 
 }
 
@@ -990,13 +992,25 @@ document.getElementById("galleryInstruction").textContent=t("choose");
 
 const overview=document.getElementById("galleryOverview");
 
+overview.style.display="block";
+
 overview.src=asset(collection.folder,collection.overview);
 
 overview.alt=t(collection.titleKey);
 
-overview.onerror=function(){this.style.display="none"};
+overview.onerror=function(){
 
-overview.onload=function(){this.style.display="block"};
+this.style.display="none";
+
+console.error("No se pudo cargar la imagen:",this.src);
+
+};
+
+overview.onload=function(){
+
+this.style.display="block";
+
+};
 
 const grid=document.getElementById("galleryProducts");
 
