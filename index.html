@@ -42,61 +42,71 @@ color:var(--dark)
 
 }
 
-header{
+.hero-banner{
 
-background:linear-gradient(135deg,#f8e8ed,#e9c5d3);
+padding:0;
+
+background:#f8e8ed;
+
+line-height:0;
+
+}
+
+.hero-banner img{
+
+display:block;
+
+width:100%;
+
+height:auto;
+
+max-height:560px;
+
+object-fit:cover;
+
+}
+
+.language-bar{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+padding:13px 15px;
+
+background:#fff7fa;
+
+border-bottom:1px solid #ead4dc;
 
 color:#513746;
 
-text-align:center;
-
-padding:65px 15px 35px;
-
-position:relative
+font-family:Arial,sans-serif;
 
 }
 
-header h1{
+.language-bar label{font-size:14px;font-weight:bold}
 
-font-size:clamp(27px,6vw,46px);
-
-font-weight:normal;
-
-letter-spacing:3px
-
-}
-
-header p{color:#80566b;letter-spacing:2px}
-
-.globe{
-
-position:absolute;
-
-right:12px;
-
-top:12px;
+.language-bar select{
 
 border:1px solid var(--gold);
 
-border-radius:25px;
+border-radius:22px;
 
-padding:8px
+padding:9px 15px;
 
-}
-
-.globe select{
-
-background:transparent;
+background:white;
 
 color:#513746;
 
-border:0;
-
-max-width:110px
+max-width:180px;
 
 }
-
-.globe option{color:#222}
 
 .intro{text-align:center;padding:30px 18px}
 
@@ -472,9 +482,23 @@ footer strong{color:var(--gold)}
 
 <body>
 
-<header>
+<!-- PORTADA CON LA IMAGEN ORIGINAL -->
 
-<div class="globe">🌐
+<header class="hero-banner">
+
+<img
+
+src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/banner-maquillajes.PNG"
+
+alt="Parfüm und Düfte Perez - Maquillajes y Colores">
+
+</header>
+
+<!-- SELECTOR DE IDIOMAS -->
+
+<div class="language-bar">
+
+<label for="language">🌐 Sprache / Idioma:</label>
 
 <select id="language" aria-label="Sprache wählen">
 
@@ -501,14 +525,6 @@ footer strong{color:var(--gold)}
 </select>
 
 </div>
-
-<p>PARFÜM UND DÜFTE PEREZ</p>
-
-<h1>MAKE-UP UND FARBEN</h1>
-
-<p id="headerSubtitle"></p>
-
-</header>
 
 <section class="intro">
 
@@ -608,7 +624,7 @@ footer strong{color:var(--gold)}
 
 <div class="separator"></div>
 
-<!-- NUEVA GAMA DIAMOND CREAM -->
+<!-- DIAMOND CREAM -->
 
 <section class="collection">
 
@@ -620,7 +636,7 @@ footer strong{color:var(--gold)}
 
 <video controls playsinline preload="metadata">
 
-<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/04_Sombra_de_ojos_Diamond_Cream/diamond_cream_tres_tonos_30s.mp4" type="video/mp4">
+<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/04_%20Sombra_de_ojos_Diamond_Cream/diamond_cream_tres_tonos_30s.mp4" type="video/mp4">
 
 </video>
 
@@ -670,7 +686,7 @@ footer strong{color:var(--gold)}
 
 </div>
 
-<!-- DETALLE -->
+<!-- DETALLE DEL PRODUCTO -->
 
 <div class="modal" id="detailModal" onclick="closeDetailOutside(event)">
 
@@ -706,7 +722,7 @@ eye:"01_maquillajes_ojos/02_ Extra_EyeStay/",
 
 shadow:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/",
 
-diamond:"04_Sombra_de_ojos_Diamond_Cream/"
+diamond:"01_maquillajes_ojos/04_ Sombra_de_ojos_Diamond_Cream/"
 
 };
 
@@ -836,7 +852,15 @@ folder:FOLDERS.diamond,
 
 overview:"sombra-de-ojo-todo-junto.PNG",
 
-products:[]
+products:[
+
+{code:"MKOM36",file:"ar-MKOM36-sombra-de-ojo.PNG"},
+
+{code:"MKOM37",file:"ar-MKOM37-sombra-de-ojo.PNG"},
+
+{code:"MKOM38",file:"ar-MKOM38-sombra-de-ojo.PNG"}
+
+]
 
 }
 
@@ -1420,11 +1444,11 @@ function productName(product){
 
 if(product.name)return product.name;
 
+if(product.code.startsWith("MKOM36")||product.code.startsWith("MKOM37")||product.code.startsWith("MKOM38"))return t("diamondName");
+
 if(product.code.startsWith("MKOM"))return t("shadowName");
 
 if(product.code.startsWith("MM07"))return t("mascaraName");
-
-if(product.code.startsWith("DC"))return t("diamondName");
 
 return "Extra EyeStay";
 
@@ -1474,12 +1498,6 @@ this.style.display="block";
 
 const grid=document.getElementById("galleryProducts");
 
-if(collection.products.length===0){
-
-grid.innerHTML="";
-
-}else{
-
 grid.innerHTML=collection.products.map((product,index)=>{
 
 const image=asset(collection.folder,product.file);
@@ -1503,8 +1521,6 @@ return `
 `;
 
 }).join("");
-
-}
 
 document.getElementById("galleryModal").classList.add("open");
 
@@ -1569,8 +1585,6 @@ currentLanguage=lang;
 document.documentElement.lang=lang;
 
 document.getElementById("language").value=lang;
-
-document.getElementById("headerSubtitle").textContent=t("header");
 
 document.getElementById("introTitle").textContent=t("intro");
 
