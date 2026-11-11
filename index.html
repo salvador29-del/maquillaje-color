@@ -482,19 +482,11 @@ footer strong{color:var(--gold)}
 
 <body>
 
-<!-- PORTADA CON LA IMAGEN ORIGINAL -->
-
 <header class="hero-banner">
 
-<img
-
-src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/banner-maquillajes.PNG"
-
-alt="Parfüm und Düfte Perez - Maquillajes y Colores">
+<img src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/banner-maquillajes.PNG" alt="Parfüm und Düfte Perez - Maquillajes y Colores">
 
 </header>
-
-<!-- SELECTOR DE IDIOMAS -->
 
 <div class="language-bar">
 
@@ -502,25 +494,25 @@ alt="Parfüm und Düfte Perez - Maquillajes y Colores">
 
 <select id="language" aria-label="Sprache wählen">
 
-<option value="de" selected>Deutsch</option>
+<option value="de" selected>🇩🇪 Deutsch</option>
 
-<option value="es">Español</option>
+<option value="es">🇪🇸 Español</option>
 
-<option value="it">Italiano</option>
+<option value="it">🇮🇹 Italiano</option>
 
-<option value="tr">Türkçe</option>
+<option value="tr">🇹🇷 Türkçe</option>
 
-<option value="ru">Русский</option>
+<option value="ru">🇷🇺 Русский</option>
 
-<option value="pt">Português</option>
+<option value="pt">🇵🇹 Português</option>
 
-<option value="sq">Shqip</option>
+<option value="sq">🇦🇱 Shqip</option>
 
-<option value="en">English</option>
+<option value="en">🇬🇧 English</option>
 
-<option value="fr">Français</option>
+<option value="fr">🇫🇷 Français</option>
 
-<option value="pl">Polski</option>
+<option value="pl">🇵🇱 Polski</option>
 
 </select>
 
@@ -536,119 +528,7 @@ alt="Parfüm und Düfte Perez - Maquillajes y Colores">
 
 <div class="separator"></div>
 
-<!-- MÁSCARAS DE PESTAÑAS -->
-
-<section class="collection">
-
-<h2 class="collection-title" data-i18n="mascaraTitle"></h2>
-
-<p class="collection-subtitle" data-i18n="mascaraSub"></p>
-
-<div class="video-frame">
-
-<video controls playsinline preload="metadata">
-
-<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/01_Coleccion_Mascaras_Pestanas/Moniamori_Mascaras_Samba_Texto.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<div class="action">
-
-<button class="btn" onclick="openGallery('mascaras')" data-i18n="viewProducts"></button>
-
-</div>
-
-</section>
-
-<div class="separator"></div>
-
-<!-- EXTRA EYESTAY -->
-
-<section class="collection">
-
-<h2 class="collection-title" data-i18n="eyeTitle"></h2>
-
-<p class="collection-subtitle" data-i18n="eyeSub"></p>
-
-<div class="video-frame">
-
-<video controls playsinline preload="metadata">
-
-<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/02_%20Extra_EyeStay/Extra_EyeStay_8_Colores_60s_CORREGIDO.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<div class="action">
-
-<button class="btn" onclick="openGallery('eyestay')" data-i18n="viewProducts"></button>
-
-</div>
-
-</section>
-
-<div class="separator"></div>
-
-<!-- SOMBRAS EN POLVO PRENSADO -->
-
-<section class="collection">
-
-<h2 class="collection-title" data-i18n="shadowTitle"></h2>
-
-<p class="collection-subtitle" data-i18n="shadowSub"></p>
-
-<div class="video-frame">
-
-<video controls playsinline preload="metadata">
-
-<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/03_%20Sombra_de_ojos_en_polvo_prensado/Maquillajes_y_Colores_Elegante_Limpio.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<div class="shadow-buttons">
-
-<button class="btn" onclick="openGallery('sombras1')" data-i18n="shadow1"></button>
-
-<button class="btn" onclick="openGallery('sombras2')" data-i18n="shadow2"></button>
-
-<button class="btn" onclick="openGallery('sombras3')" data-i18n="shadow3"></button>
-
-</div>
-
-</section>
-
-<div class="separator"></div>
-
-<!-- DIAMOND CREAM -->
-
-<section class="collection">
-
-<h2 class="collection-title" data-i18n="diamondTitle"></h2>
-
-<p class="collection-subtitle" data-i18n="diamondSub"></p>
-
-<div class="video-frame">
-
-<video controls playsinline preload="metadata">
-
-<source src="https://raw.githubusercontent.com/salvador29-del/maquillaje-color/main/01_maquillajes_ojos/04_%20Sombra_de_ojos_Diamond_Cream/diamond_cream_tres_tonos_30s.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<div class="action">
-
-<button class="btn" onclick="openGallery('diamond')" data-i18n="viewProducts"></button>
-
-</div>
-
-</section>
+<div id="collectionsRoot"></div>
 
 <footer>
 
@@ -658,15 +538,13 @@ alt="Parfüm und Düfte Perez - Maquillajes y Colores">
 
 <br><span id="footerText"></span>
 
-<a class="btn btn-whatsapp" href="https://wa.me/491745201068" target="_blank" rel="noopener" data-i18n="whatsapp"></a>
+<a class="btn btn-whatsapp" href="https://wa.me/491745201068" target="_blank" rel="noopener" data-i18n="whatsapp">PER WHATSAPP BESTELLEN</a>
 
 <br><br>
 
 <small>© 2026 Parfüm und Düfte Perez</small>
 
 </footer>
-
-<!-- GALERÍA -->
 
 <div class="modal" id="galleryModal" onclick="closeGalleryOutside(event)">
 
@@ -686,8 +564,6 @@ alt="Parfüm und Düfte Perez - Maquillajes y Colores">
 
 </div>
 
-<!-- DETALLE DEL PRODUCTO -->
-
 <div class="modal" id="detailModal" onclick="closeDetailOutside(event)">
 
 <div class="modal-content detail-content">
@@ -699,6 +575,8 @@ alt="Parfüm und Düfte Perez - Maquillajes y Colores">
 <img class="detail-image" id="detailImage" src="" alt="Produkt">
 
 <p class="detail-code" id="detailCode"></p>
+
+<p id="detailPrice"></p>
 
 <p class="detail-description" id="detailDescription"></p>
 
@@ -722,15 +600,29 @@ eye:"01_maquillajes_ojos/02_ Extra_EyeStay/",
 
 shadow:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/",
 
-diamond:"01_maquillajes_ojos/04_ Sombra_de_ojos_Diamond_Cream/"
+diamond:"01_maquillajes_ojos/04_ Sombra_de_ojos_Diamond_Cream/",
+
+palette:"01_maquillajes_ojos/05_ Paleta_de_sombras_de_ojos_9_Colores/",
+
+sticks:"02_maquillajes_rostro/01_Sticks_ Multifuncion/",
+
+foundation:"02_maquillajes_rostro/02_Bases_de_Maquillajes/",
+
+powder:"02_maquillajes_rostro/03_Polvos_Colores_Bronceadores_y_Iluminadores/",
+
+concealer:"02_maquillajes_rostro/04_Correctores/"
 
 };
 
 function asset(folder,file){
 
-const encodedFolder=folder.split("/").map(part=>encodeURIComponent(part)).join("/");
+return ROOT+folder.split("/").map(encodeURIComponent).join("/")+"/"+encodeURIComponent(file);
 
-return ROOT+encodedFolder+encodeURIComponent(file);
+}
+
+function product(code,file,price,name){
+
+return {code,file,price,name};
 
 }
 
@@ -770,21 +662,21 @@ overview:"coleccion-eye-colors-todos-juntos.PNG",
 
 products:[
 
-{code:"MM016",file:"ar-MM016-extra-eyestay.PNG"},
+{code:"MM016",file:"ar-MM016-extra-eyestay.PNG",price:11.90},
 
-{code:"MM017",file:"ar-MM017-extra-eyestay.PNG"},
+{code:"MM017",file:"ar-MM017-extra-eyestay.PNG",price:11.90},
 
-{code:"MM018",file:"ar-MM018-extra-eyestay.PNG"},
+{code:"MM018",file:"ar-MM018-extra-eyestay.PNG",price:11.90},
 
-{code:"MM019",file:"ar-MM019-extra-eyestay.PNG"},
+{code:"MM019",file:"ar-MM019-extra-eyestay.PNG",price:11.90},
 
-{code:"MM020",file:"ar-MM020-extra-eyestay.PNG"},
+{code:"MM020",file:"ar-MM020-extra-eyestay.PNG",price:11.90},
 
-{code:"MM021",file:"ar-MM021-extra-eyestay.PNG"},
+{code:"MM021",file:"ar-MM021-extra-eyestay.PNG",price:11.90},
 
-{code:"MM022",file:"ar-MM022-extra-eyestay.PNG"},
+{code:"MM022",file:"ar-MM022-extra-eyestay.PNG",price:11.90},
 
-{code:"MM023",file:"ar-MM023-extra-eyestay.PNG",name:"Bold Orchid"}
+{code:"MM023",file:"ar-MM023-extra-eyestay.PNG",name:"Bold Orchid",price:11.90}
 
 ]
 
@@ -802,7 +694,9 @@ products:Array.from({length:6},(_,i)=>({
 
 code:"MKOM"+(10+i),
 
-file:"coleccion-1-MKOM"+(10+i)+".PNG"
+file:"coleccion-1-MKOM"+(10+i)+".PNG",
+
+price:19.00
 
 }))
 
@@ -820,7 +714,9 @@ products:Array.from({length:10},(_,i)=>({
 
 code:"MKOM"+(16+i),
 
-file:"coleccion-2-MKOM"+(16+i)+".PNG"
+file:"coleccion-2-MKOM"+(16+i)+".PNG",
+
+price:19.00
 
 }))
 
@@ -838,7 +734,9 @@ products:Array.from({length:10},(_,i)=>({
 
 code:"MKOM"+(26+i),
 
-file:"coleccion-3-MKOM"+(26+i)+".PNG"
+file:"coleccion-3-MKOM"+(26+i)+".PNG",
+
+price:19.00
 
 }))
 
@@ -854,11 +752,181 @@ overview:"sombra-de-ojo-todo-junto.PNG",
 
 products:[
 
-{code:"MKOM36",file:"ar-MKOM36-sombra-de-ojo.PNG"},
+{code:"MKOM36",file:"ar-MKOM36-sombra-de-ojo.PNG",price:19.90},
 
-{code:"MKOM37",file:"ar-MKOM37-sombra-de-ojo.PNG"},
+{code:"MKOM37",file:"ar-MKOM37-sombra-de-ojo.PNG",price:19.90},
 
-{code:"MKOM38",file:"ar-MKOM38-sombra-de-ojo.PNG"}
+{code:"MKOM38",file:"ar-MKOM38-sombra-de-ojo.PNG",price:19.90}
+
+]
+
+},
+
+palettes:{
+
+titleKey:"paletteTitle",
+
+folder:FOLDERS.palette,
+
+overview:"paletas-todas-juntas-de-ojo.PNG",
+
+products:[
+
+{code:"MKPL01",file:"ar-MKPL01-autumn-vibes.PNG",price:39.99},
+
+{code:"MKPL02",file:"ar-MKPL02-spring-flowers.PNG",price:39.99},
+
+{code:"MKPL03",file:"ar-MKPL03-winter-queen.PNG",price:39.99},
+
+{code:"MKPL04",file:"ar-MKPL04-summer-breeze.PNG",price:39.99}
+
+]
+
+},
+
+sticks:{
+
+titleKey:"sticksTitle",
+
+folder:FOLDERS.sticks,
+
+overview:"stick-9-todos-juntos.PNG",
+
+products:[
+
+{code:"MM037",file:"ar-MM037-contorno-stick.PNG"},
+
+{code:"MM038",file:"ar-MM038-contorno-stick.PNG"},
+
+{code:"MM039",file:"ar-MM039-contorno-stick.PNG"},
+
+{code:"MM040",file:"ar-MM040-multi-use-stick.PNG",price:19.90},
+
+{code:"MM041",file:"ar-MM041-multi-use-stick.PNG",price:19.90},
+
+{code:"MM042",file:"ar-MM042-multi-use-stick.PNG",price:19.90},
+
+{code:"MM043",file:"ar-MM043-highlighter-stick.PNG"},
+
+{code:"MM044",file:"ar-MM044-highlighter-stick.PNG"},
+
+{code:"MM045",file:"ar-MM045-highlighter-stick.PNG"}
+
+]
+
+},
+
+foundation:{
+
+titleKey:"foundationTitle",
+
+folder:FOLDERS.foundation,
+
+overview:"mascara-cara-todos-los-productos.PNG",
+
+products:[
+
+{code:"LM09",file:"ar-LM09-hydra-foundation.PNG"},
+
+{code:"LM11",file:"ar-LM11-instant-matte.PNG"},
+
+{code:"LM12",file:"ar-LM12-instant-matte.PNG"},
+
+{code:"LM13",file:"ar-LM13-instant-matte.PNG"},
+
+{code:"LM14",file:"ar-LM14-instant-matte.PNG"},
+
+{code:"LM15",file:"ar-LM15-perfect-hydra.PNG"},
+
+{code:"LM16",file:"ar-LM16-perfect-hydra.PNG"},
+
+{code:"LM17",file:"ar-LM17-perfect-hydra.PNG"},
+
+{code:"LM18",file:"ar-LM18-perfect-hydra.PNG"},
+
+{code:"LM19",file:"ar-LM19-perfect-hydra.PNG"},
+
+{code:"MM005",file:"ar-MM005-solar-defence.PNG",price:35.90},
+
+{code:"MM006",file:"ar-MM006-solar-defence.PNG",price:35.90},
+
+{code:"MM007",file:"ar-MM007-solar-defence.PNG",price:35.90},
+
+{code:"MM008",file:"ar-MM008-solar-defence.PNG",price:35.90},
+
+{code:"MM009",file:"ar-MM009-solar-defence.PNG",price:35.90}
+
+]
+
+},
+
+powders:{
+
+titleKey:"powderTitle",
+
+folder:FOLDERS.powder,
+
+overview:"mascarilla-base-todas-juntas-12.PNG",
+
+products:[
+
+{code:"CPR13",file:"ar-CPR13-warm-shade.PNG"},
+
+{code:"CPR14",file:"ar-CPR14-warm-shade.PNG"},
+
+{code:"CPR15",file:"ar-CPR15-warm-shade.PNG"},
+
+{code:"CPR16",file:"ar-CPR16-warm-shade.PNG"},
+
+{code:"FRD10",file:"ar-FRD10-warm-shade.PNG"},
+
+{code:"FRD11",file:"ar-FRD11-warm-shade.PNG"},
+
+{code:"FRD12",file:"ar-FRD12-warm-shade.PNG"},
+
+{code:"MKILL06",file:"ar-MKILL06-warm-shade.PNG"},
+
+{code:"TER12",file:"ar-TER12-warm-shade.PNG"},
+
+{code:"TER13",file:"ar-TER13-warm-shade.PNG"},
+
+{code:"TER14",file:"ar-TER14-warm-shade.PNG"},
+
+{code:"TER15",file:"ar-TER15-warm-shade.PNG"}
+
+]
+
+},
+
+concealers:{
+
+titleKey:"concealerTitle",
+
+folder:FOLDERS.concealer,
+
+overview:"corrector-todos-juntos.PNG",
+
+products:[
+
+{code:"COR01",file:"art-COR01-jumbo-conceaaler.PNG"},
+
+{code:"COR02",file:"art-COR02-jumbo-concealer.PNG"},
+
+{code:"COR03",file:"art-COR03-jumbo-concealer.PNG"},
+
+{code:"COR04",file:"art-COR04-corrector-liquido.PNG"},
+
+{code:"COR05",file:"art-COR05-corrector-liquido.PNG"},
+
+{code:"COR06",file:"art-COR06-corrector-liquido.PNG"},
+
+{code:"COR07",file:"art-COR07-corrector-liquido.PNG"},
+
+{code:"COR08",file:"art-COR08-corrector-alta-cobertura.PNG",price:19.90},
+
+{code:"COR09",file:"art-COR09-corrector-alta-cobertura.PNG"},
+
+{code:"COR10",file:"art-COR10-corrector-alta-cobertura.PNG"}
 
 ]
 
@@ -870,8 +938,6 @@ const translations={
 
 de:{
 
-header:"Schönheit · Farbe · Eleganz",
-
 intro:"Entdecke die Welt des Make-ups",
 
 introText:"Entdecke unsere Make-up-Kollektionen und finde deine Lieblingsprodukte.",
@@ -882,15 +948,9 @@ footerBrand:"Make-up und Farben",
 
 mascaraTitle:"Wimperntusche",
 
-mascaraSub:"AUSDRUCKSSTARKE AUGENBLICKE",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 FARBEN · DEIN LOOK, DEIN STIL",
-
 shadowTitle:"Gepresster Lidschatten",
-
-shadowSub:"26 FARBEN · DREI KOLLEKTIONEN",
 
 shadow1:"KOLLEKTION 1 · 6 FARBEN",
 
@@ -900,7 +960,33 @@ shadow3:"KOLLEKTION 3 · 10 FARBEN",
 
 diamondTitle:"Diamond Cream – Lidschatten",
 
+paletteTitle:"Lidschattenpaletten · 9 Farben",
+
+sticksTitle:"Multifunktions-Sticks",
+
+foundationTitle:"Make-up-Grundierungen",
+
+powderTitle:"Puder, Farben, Bronzer und Highlighter",
+
+concealerTitle:"Concealer",
+
+mascaraSub:"AUSDRUCKSSTARKE AUGENBLICKE",
+
+eyeSub:"8 FARBEN · DEIN LOOK, DEIN STIL",
+
+shadowSub:"26 FARBEN · DREI KOLLEKTIONEN",
+
 diamondSub:"DREI ELEGANTE FARBNUANCEN",
+
+paletteSub:"VIER PALETTEN · DEIN FARBLOOK",
+
+sticksSub:"KONTURIEREN · MULTI-USE · HIGHLIGHTER",
+
+foundationSub:"ENTDECKE DIE PASSENDE TEXTUR",
+
+powderSub:"FARBE UND LEUCHTKRAFT",
+
+concealerSub:"FÜR EINEN EBENMÄSSIGEN TEINT",
 
 viewProducts:"PRODUKTE ANSEHEN",
 
@@ -910,6 +996,8 @@ choose:"Wähle das Produkt aus, über das du mehr erfahren möchtest.",
 
 code:"Artikel",
 
+price:"Preis",
+
 description:"Erfahre mehr über Eigenschaften und Verfügbarkeit. Kontaktiere uns gerne per WhatsApp.",
 
 whatsapp:"PER WHATSAPP BESTELLEN",
@@ -918,15 +1006,11 @@ mascaraName:"Wimperntusche",
 
 shadowName:"Gepresster Lidschatten",
 
-diamondName:"Diamond Cream – Lidschatten",
-
-close:"Schließen"
+diamondName:"Diamond Cream – Lidschatten"
 
 },
 
 es:{
-
-header:"Belleza · Color · Elegancia",
 
 intro:"Descubre el mundo del maquillaje",
 
@@ -938,15 +1022,9 @@ footerBrand:"Maquillajes y Colores",
 
 mascaraTitle:"Máscaras de pestañas",
 
-mascaraSub:"MIRADAS QUE ENAMORAN",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 COLORES · TU MIRADA, TU ESTILO",
-
 shadowTitle:"Sombras de ojos en polvo prensado",
-
-shadowSub:"26 TONOS · TRES COLECCIONES",
 
 shadow1:"COLECCIÓN 1 · 6 TONOS",
 
@@ -956,7 +1034,33 @@ shadow3:"COLECCIÓN 3 · 10 TONOS",
 
 diamondTitle:"Sombras de ojos Diamond Cream",
 
+paletteTitle:"Paletas de sombras · 9 colores",
+
+sticksTitle:"Sticks multifunción",
+
+foundationTitle:"Bases de maquillaje",
+
+powderTitle:"Polvos, coloretes, bronceadores e iluminadores",
+
+concealerTitle:"Correctores",
+
+mascaraSub:"MIRADAS QUE ENAMORAN",
+
+eyeSub:"8 COLORES · TU MIRADA, TU ESTILO",
+
+shadowSub:"26 TONOS · TRES COLECCIONES",
+
 diamondSub:"TRES TONOS ELEGANTES",
+
+paletteSub:"CUATRO PALETAS · TU ESTILO DE COLOR",
+
+sticksSub:"CONTORNO · MULTIUSO · ILUMINADOR",
+
+foundationSub:"ENCUENTRA TU TEXTURA IDEAL",
+
+powderSub:"COLOR Y LUMINOSIDAD",
+
+concealerSub:"PARA UN TONO UNIFORME",
 
 viewProducts:"VER PRODUCTO",
 
@@ -966,6 +1070,8 @@ choose:"Elige el producto que deseas consultar.",
 
 code:"Artículo",
 
+price:"Precio",
+
 description:"Consulta las características y disponibilidad de este producto. Para más información, escríbenos por WhatsApp.",
 
 whatsapp:"PEDIR POR WHATSAPP",
@@ -974,15 +1080,11 @@ mascaraName:"Máscara de pestañas",
 
 shadowName:"Sombra de ojos en polvo prensado",
 
-diamondName:"Sombra de ojos Diamond Cream",
-
-close:"Cerrar"
+diamondName:"Sombra de ojos Diamond Cream"
 
 },
 
 it:{
-
-header:"Bellezza · Colore · Eleganza",
 
 intro:"Scopri il mondo del make-up",
 
@@ -994,15 +1096,9 @@ footerBrand:"Make-up e Colori",
 
 mascaraTitle:"Mascara",
 
-mascaraSub:"SGUARDI CHE FANNO INNAMORARE",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 COLORI · IL TUO SGUARDO, IL TUO STILE",
-
 shadowTitle:"Ombretti in polvere compatta",
-
-shadowSub:"26 TONALITÀ · TRE COLLEZIONI",
 
 shadow1:"COLLEZIONE 1 · 6 TONALITÀ",
 
@@ -1012,7 +1108,33 @@ shadow3:"COLLEZIONE 3 · 10 TONALITÀ",
 
 diamondTitle:"Ombretto Diamond Cream",
 
+paletteTitle:"Palette di ombretti · 9 colori",
+
+sticksTitle:"Stick multifunzione",
+
+foundationTitle:"Fondotinta",
+
+powderTitle:"Ciprie, colori, bronzer e illuminanti",
+
+concealerTitle:"Correttori",
+
+mascaraSub:"SGUARDI CHE FANNO INNAMORARE",
+
+eyeSub:"8 COLORI · IL TUO SGUARDO, IL TUO STILE",
+
+shadowSub:"26 TONALITÀ · TRE COLLEZIONI",
+
 diamondSub:"TRE TONALITÀ ELEGANTI",
+
+paletteSub:"QUATTRO PALETTE",
+
+sticksSub:"CONTORNO · MULTIUSO · ILLUMINANTE",
+
+foundationSub:"TROVA LA TUA TEXTURE",
+
+powderSub:"COLORE E LUMINOSITÀ",
+
+concealerSub:"PER UN INCARNATO UNIFORME",
 
 viewProducts:"VEDI PRODOTTI",
 
@@ -1022,6 +1144,8 @@ choose:"Scegli il prodotto che desideri conoscere.",
 
 code:"Articolo",
 
+price:"Prezzo",
+
 description:"Scopri le caratteristiche e la disponibilità del prodotto. Contattaci su WhatsApp.",
 
 whatsapp:"ORDINA SU WHATSAPP",
@@ -1030,15 +1154,11 @@ mascaraName:"Mascara",
 
 shadowName:"Ombretto in polvere compatta",
 
-diamondName:"Ombretto Diamond Cream",
-
-close:"Chiudi"
+diamondName:"Ombretto Diamond Cream"
 
 },
 
 tr:{
-
-header:"Güzellik · Renk · Zarafet",
 
 intro:"Makyaj dünyasını keşfet",
 
@@ -1050,15 +1170,9 @@ footerBrand:"Makyaj ve Renkler",
 
 mascaraTitle:"Kirpik Maskarası",
 
-mascaraSub:"ETKİLEYİCİ BAKIŞLAR",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 RENK · SENİN BAKIŞIN, SENİN TARZIN",
-
 shadowTitle:"Preslenmiş Toz Göz Farı",
-
-shadowSub:"26 TON · ÜÇ KOLEKSİYON",
 
 shadow1:"1. KOLEKSİYON · 6 TON",
 
@@ -1068,7 +1182,33 @@ shadow3:"3. KOLEKSİYON · 10 TON",
 
 diamondTitle:"Diamond Cream Göz Farı",
 
+paletteTitle:"Göz farı paletleri · 9 renk",
+
+sticksTitle:"Çok amaçlı stickler",
+
+foundationTitle:"Fondötenler",
+
+powderTitle:"Pudra, allık, bronzer ve aydınlatıcı",
+
+concealerTitle:"Kapatıcılar",
+
+mascaraSub:"ETKİLEYİCİ BAKIŞLAR",
+
+eyeSub:"8 RENK · SENİN BAKIŞIN, SENİN TARZIN",
+
+shadowSub:"26 TON · ÜÇ KOLEKSİYON",
+
 diamondSub:"ÜÇ ŞIK RENK",
+
+paletteSub:"DÖRT PALET",
+
+sticksSub:"KONTÜR · ÇOK AMAÇLI · AYDINLATICI",
+
+foundationSub:"SANA UYGUN DOKUYU BUL",
+
+powderSub:"RENK VE IŞILTI",
+
+concealerSub:"EŞİT BİR CİLT GÖRÜNÜMÜ",
 
 viewProducts:"ÜRÜNLERİ GÖR",
 
@@ -1078,6 +1218,8 @@ choose:"İlgilendiğiniz ürünü seçin.",
 
 code:"Ürün kodu",
 
+price:"Fiyat",
+
 description:"Ürünün özellikleri ve stok durumu için WhatsApp üzerinden bize ulaşın.",
 
 whatsapp:"WHATSAPP'TAN SİPARİŞ",
@@ -1086,15 +1228,11 @@ mascaraName:"Kirpik Maskarası",
 
 shadowName:"Preslenmiş Toz Göz Farı",
 
-diamondName:"Diamond Cream Göz Farı",
-
-close:"Kapat"
+diamondName:"Diamond Cream Göz Farı"
 
 },
 
 ru:{
-
-header:"Красота · Цвет · Элегантность",
 
 intro:"Откройте мир макияжа",
 
@@ -1106,15 +1244,9 @@ footerBrand:"Макияж и Цвета",
 
 mascaraTitle:"Тушь для ресниц",
 
-mascaraSub:"ВЫРАЗИТЕЛЬНЫЙ ВЗГЛЯД",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 ЦВЕТОВ · ТВОЙ ВЗГЛЯД, ТВОЙ СТИЛЬ",
-
 shadowTitle:"Прессованные тени для век",
-
-shadowSub:"26 ОТТЕНКОВ · ТРИ КОЛЛЕКЦИИ",
 
 shadow1:"КОЛЛЕКЦИЯ 1 · 6 ОТТЕНКОВ",
 
@@ -1124,7 +1256,33 @@ shadow3:"КОЛЛЕКЦИЯ 3 · 10 ОТТЕНКОВ",
 
 diamondTitle:"Тени для век Diamond Cream",
 
+paletteTitle:"Палетки теней · 9 цветов",
+
+sticksTitle:"Многофункциональные стики",
+
+foundationTitle:"Тональные основы",
+
+powderTitle:"Пудра, румяна, бронзеры и хайлайтеры",
+
+concealerTitle:"Консилеры",
+
+mascaraSub:"ВЫРАЗИТЕЛЬНЫЙ ВЗГЛЯД",
+
+eyeSub:"8 ЦВЕТОВ · ТВОЙ ВЗГЛЯД, ТВОЙ СТИЛЬ",
+
+shadowSub:"26 ОТТЕНКОВ · ТРИ КОЛЛЕКЦИИ",
+
 diamondSub:"ТРИ ЭЛЕГАНТНЫХ ОТТЕНКА",
+
+paletteSub:"ЧЕТЫРЕ ПАЛЕТКИ",
+
+sticksSub:"КОНТУР · УНИВЕРСАЛЬНЫЕ · ХАЙЛАЙТЕР",
+
+foundationSub:"ПОДБЕРИТЕ ТЕКСТУРУ",
+
+powderSub:"ЦВЕТ И СИЯНИЕ",
+
+concealerSub:"ДЛЯ РОВНОГО ТОНА",
 
 viewProducts:"СМОТРЕТЬ ТОВАРЫ",
 
@@ -1134,6 +1292,8 @@ choose:"Выберите интересующий вас товар.",
 
 code:"Артикул",
 
+price:"Цена",
+
 description:"Узнайте характеристики и наличие товара через WhatsApp.",
 
 whatsapp:"ЗАКАЗАТЬ В WHATSAPP",
@@ -1142,15 +1302,11 @@ mascaraName:"Тушь для ресниц",
 
 shadowName:"Прессованные тени для век",
 
-diamondName:"Тени для век Diamond Cream",
-
-close:"Закрыть"
+diamondName:"Тени для век Diamond Cream"
 
 },
 
 pt:{
-
-header:"Beleza · Cor · Elegância",
 
 intro:"Descubra o mundo da maquilhagem",
 
@@ -1162,15 +1318,9 @@ footerBrand:"Maquilhagem e Cores",
 
 mascaraTitle:"Máscara de pestanas",
 
-mascaraSub:"OLHARES QUE ENCANTAM",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 CORES · O TEU OLHAR, O TEU ESTILO",
-
 shadowTitle:"Sombras em pó compacto",
-
-shadowSub:"26 TONS · TRÊS COLEÇÕES",
 
 shadow1:"COLEÇÃO 1 · 6 TONS",
 
@@ -1180,7 +1330,33 @@ shadow3:"COLEÇÃO 3 · 10 TONS",
 
 diamondTitle:"Sombras Diamond Cream",
 
+paletteTitle:"Paletas de sombras · 9 cores",
+
+sticksTitle:"Sticks multifunções",
+
+foundationTitle:"Bases de maquilhagem",
+
+powderTitle:"Pós, blushes, bronzeadores e iluminadores",
+
+concealerTitle:"Corretores",
+
+mascaraSub:"OLHARES QUE ENCANTAM",
+
+eyeSub:"8 CORES · O TEU OLHAR, O TEU ESTILO",
+
+shadowSub:"26 TONS · TRÊS COLEÇÕES",
+
 diamondSub:"TRÊS TONS ELEGANTES",
+
+paletteSub:"QUATRO PALETAS",
+
+sticksSub:"CONTORNO · MULTIUSO · ILUMINADOR",
+
+foundationSub:"ENCONTRE A SUA TEXTURA",
+
+powderSub:"COR E LUMINOSIDADE",
+
+concealerSub:"PARA UM TOM UNIFORME",
 
 viewProducts:"VER PRODUTOS",
 
@@ -1190,6 +1366,8 @@ choose:"Escolha o produto que deseja consultar.",
 
 code:"Artigo",
 
+price:"Preço",
+
 description:"Consulte as características e disponibilidade deste produto pelo WhatsApp.",
 
 whatsapp:"ENCOMENDAR PELO WHATSAPP",
@@ -1198,15 +1376,11 @@ mascaraName:"Máscara de pestanas",
 
 shadowName:"Sombra em pó compacto",
 
-diamondName:"Sombra Diamond Cream",
-
-close:"Fechar"
+diamondName:"Sombra Diamond Cream"
 
 },
 
 sq:{
-
-header:"Bukuri · Ngjyra · Elegancë",
 
 intro:"Zbuloni botën e makijazhit",
 
@@ -1218,15 +1392,9 @@ footerBrand:"Makijazh dhe Ngjyra",
 
 mascaraTitle:"Maskara për qerpikë",
 
-mascaraSub:"VËSHTRIME QË MAGJEPSIN",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 NGJYRA · STILI YT",
-
 shadowTitle:"Hije sysh në pluhur të presuar",
-
-shadowSub:"26 NUANCA · TRE KOLEKSIONE",
 
 shadow1:"KOLEKSIONI 1 · 6 NUANCA",
 
@@ -1236,7 +1404,33 @@ shadow3:"KOLEKSIONI 3 · 10 NUANCA",
 
 diamondTitle:"Hije sysh Diamond Cream",
 
+paletteTitle:"Paleta hijesh · 9 ngjyra",
+
+sticksTitle:"Stikë shumëfunksionalë",
+
+foundationTitle:"Baza makijazhi",
+
+powderTitle:"Pudra, ngjyra, bronzues dhe ndriçues",
+
+concealerTitle:"Korrektorë",
+
+mascaraSub:"VËSHTRIME QË MAGJEPSIN",
+
+eyeSub:"8 NGJYRA · STILI YT",
+
+shadowSub:"26 NUANCA · TRE KOLEKSIONE",
+
 diamondSub:"TRE NUANCA ELEGANTE",
+
+paletteSub:"KATËR PALETA",
+
+sticksSub:"KONTUR · SHUMËPËRDORIMËS · NDRIÇUES",
+
+foundationSub:"GJENI TEKSTURËN TUAJ",
+
+powderSub:"NGJYRË DHE SHKËLQIM",
+
+concealerSub:"PËR NJË TON TË NJËTRAJTË",
 
 viewProducts:"SHIKO PRODUKTET",
 
@@ -1246,6 +1440,8 @@ choose:"Zgjidhni produktin që dëshironi të konsultoni.",
 
 code:"Artikulli",
 
+price:"Çmimi",
+
 description:"Për karakteristikat dhe disponueshmërinë na kontaktoni në WhatsApp.",
 
 whatsapp:"POROSIT NË WHATSAPP",
@@ -1254,15 +1450,11 @@ mascaraName:"Maskara për qerpikë",
 
 shadowName:"Hije sysh në pluhur të presuar",
 
-diamondName:"Hije sysh Diamond Cream",
-
-close:"Mbyll"
+diamondName:"Hije sysh Diamond Cream"
 
 },
 
 en:{
-
-header:"Beauty · Colour · Elegance",
 
 intro:"Discover the world of makeup",
 
@@ -1274,15 +1466,9 @@ footerBrand:"Makeup and Colours",
 
 mascaraTitle:"Mascara",
 
-mascaraSub:"EYES THAT CAPTIVATE",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 COLOURS · YOUR LOOK, YOUR STYLE",
-
 shadowTitle:"Pressed Powder Eyeshadow",
-
-shadowSub:"26 SHADES · THREE COLLECTIONS",
 
 shadow1:"COLLECTION 1 · 6 SHADES",
 
@@ -1292,7 +1478,33 @@ shadow3:"COLLECTION 3 · 10 SHADES",
 
 diamondTitle:"Diamond Cream Eyeshadow",
 
+paletteTitle:"Eyeshadow palettes · 9 colours",
+
+sticksTitle:"Multi-use sticks",
+
+foundationTitle:"Foundations",
+
+powderTitle:"Powders, blush, bronzers and highlighters",
+
+concealerTitle:"Concealers",
+
+mascaraSub:"EYES THAT CAPTIVATE",
+
+eyeSub:"8 COLOURS · YOUR LOOK, YOUR STYLE",
+
+shadowSub:"26 SHADES · THREE COLLECTIONS",
+
 diamondSub:"THREE ELEGANT SHADES",
+
+paletteSub:"FOUR PALETTES",
+
+sticksSub:"CONTOUR · MULTI-USE · HIGHLIGHTER",
+
+foundationSub:"FIND YOUR PERFECT TEXTURE",
+
+powderSub:"COLOUR AND RADIANCE",
+
+concealerSub:"FOR AN EVEN COMPLEXION",
 
 viewProducts:"VIEW PRODUCTS",
 
@@ -1302,6 +1514,8 @@ choose:"Choose the product you would like to discover.",
 
 code:"Article",
 
+price:"Price",
+
 description:"Contact us on WhatsApp for product information and availability.",
 
 whatsapp:"ORDER VIA WHATSAPP",
@@ -1310,15 +1524,11 @@ mascaraName:"Mascara",
 
 shadowName:"Pressed powder eyeshadow",
 
-diamondName:"Diamond Cream Eyeshadow",
-
-close:"Close"
+diamondName:"Diamond Cream Eyeshadow"
 
 },
 
 fr:{
-
-header:"Beauté · Couleur · Élégance",
 
 intro:"Découvrez le monde du maquillage",
 
@@ -1330,15 +1540,9 @@ footerBrand:"Maquillage et Couleurs",
 
 mascaraTitle:"Mascara",
 
-mascaraSub:"DES REGARDS QUI SÉDUISENT",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 COULEURS · VOTRE STYLE",
-
 shadowTitle:"Fards à paupières en poudre pressée",
-
-shadowSub:"26 TEINTES · TROIS COLLECTIONS",
 
 shadow1:"COLLECTION 1 · 6 TEINTES",
 
@@ -1348,7 +1552,33 @@ shadow3:"COLLECTION 3 · 10 TEINTES",
 
 diamondTitle:"Fards Diamond Cream",
 
+paletteTitle:"Palettes de fards · 9 couleurs",
+
+sticksTitle:"Sticks multifonctions",
+
+foundationTitle:"Fonds de teint",
+
+powderTitle:"Poudres, blushs, bronzers et illuminateurs",
+
+concealerTitle:"Correcteurs",
+
+mascaraSub:"DES REGARDS QUI SÉDUISENT",
+
+eyeSub:"8 COULEURS · VOTRE STYLE",
+
+shadowSub:"26 TEINTES · TROIS COLLECTIONS",
+
 diamondSub:"TROIS TEINTES ÉLÉGANTES",
+
+paletteSub:"QUATRE PALETTES",
+
+sticksSub:"CONTOUR · MULTIUSAGE · ILLUMINATEUR",
+
+foundationSub:"TROUVEZ VOTRE TEXTURE",
+
+powderSub:"COULEUR ET ÉCLAT",
+
+concealerSub:"POUR UN TEINT UNIFIÉ",
 
 viewProducts:"VOIR LES PRODUITS",
 
@@ -1358,6 +1588,8 @@ choose:"Choisissez le produit qui vous intéresse.",
 
 code:"Article",
 
+price:"Prix",
+
 description:"Contactez-nous sur WhatsApp pour connaître les caractéristiques et la disponibilité.",
 
 whatsapp:"COMMANDER SUR WHATSAPP",
@@ -1366,15 +1598,11 @@ mascaraName:"Mascara",
 
 shadowName:"Fard à paupières en poudre pressée",
 
-diamondName:"Fard à paupières Diamond Cream",
-
-close:"Fermer"
+diamondName:"Fard à paupières Diamond Cream"
 
 },
 
 pl:{
-
-header:"Piękno · Kolor · Elegancja",
 
 intro:"Odkryj świat makijażu",
 
@@ -1386,15 +1614,9 @@ footerBrand:"Makijaż i Kolory",
 
 mascaraTitle:"Tusz do rzęs",
 
-mascaraSub:"SPOJRZENIE, KTÓRE ZACHWYCA",
-
 eyeTitle:"Extra EyeStay",
 
-eyeSub:"8 KOLORÓW · TWÓJ STYL",
-
 shadowTitle:"Prasowane cienie do powiek",
-
-shadowSub:"26 ODCIENI · TRZY KOLEKCJE",
 
 shadow1:"KOLEKCJA 1 · 6 ODCIENI",
 
@@ -1404,7 +1626,33 @@ shadow3:"KOLEKCJA 3 · 10 ODCIENI",
 
 diamondTitle:"Cienie Diamond Cream",
 
+paletteTitle:"Palety cieni · 9 kolorów",
+
+sticksTitle:"Wielofunkcyjne sztyfty",
+
+foundationTitle:"Podkłady",
+
+powderTitle:"Pudry, róże, bronzery i rozświetlacze",
+
+concealerTitle:"Korektory",
+
+mascaraSub:"SPOJRZENIE, KTÓRE ZACHWYCA",
+
+eyeSub:"8 KOLORÓW · TWÓJ STYL",
+
+shadowSub:"26 ODCIENI · TRZY KOLEKCJE",
+
 diamondSub:"TRZY ELEGANCKIE ODCIENIE",
+
+paletteSub:"CZTERY PALETY",
+
+sticksSub:"KONTUROWANIE · MULTI · ROZŚWIETLANIE",
+
+foundationSub:"ZNAJDŹ IDEALNĄ KONSYSTENCJĘ",
+
+powderSub:"KOLOR I BLASK",
+
+concealerSub:"DLA WYRÓWNANEJ CERY",
 
 viewProducts:"ZOBACZ PRODUKTY",
 
@@ -1414,6 +1662,8 @@ choose:"Wybierz produkt, który Cię interesuje.",
 
 code:"Artykuł",
 
+price:"Cena",
+
 description:"Skontaktuj się z nami przez WhatsApp, aby uzyskać informacje o produkcie.",
 
 whatsapp:"ZAMÓW PRZEZ WHATSAPP",
@@ -1422,9 +1672,7 @@ mascaraName:"Tusz do rzęs",
 
 shadowName:"Prasowany cień do powiek",
 
-diamondName:"Cień do powiek Diamond Cream",
-
-close:"Zamknij"
+diamondName:"Cień do powiek Diamond Cream"
 
 }
 
@@ -1450,15 +1698,123 @@ if(product.code.startsWith("MKOM"))return t("shadowName");
 
 if(product.code.startsWith("MM07"))return t("mascaraName");
 
-return "Extra EyeStay";
+if(product.code.startsWith("COR"))return t("concealerTitle");
+
+if(product.code.startsWith("MKPL"))return t("paletteTitle");
+
+return t("foundationTitle");
 
 }
 
 function whatsappLink(product){
 
-const message="Hallo, ich interessiere mich für "+productName(product)+", Artikel "+product.code+".";
+const message="Hallo, ich interessiere mich für Artikel "+product.code+".";
 
 return "https://wa.me/"+WA+"?text="+encodeURIComponent(message);
+
+}
+
+function collectionSubtitle(id){
+
+const map={
+
+mascaras:"mascaraSub",
+
+eyestay:"eyeSub",
+
+sombras1:"shadowSub",
+
+sombras2:"shadowSub",
+
+sombras3:"shadowSub",
+
+diamond:"diamondSub",
+
+palettes:"paletteSub",
+
+sticks:"sticksSub",
+
+foundation:"foundationSub",
+
+powders:"powderSub",
+
+concealers:"concealerSub"
+
+};
+
+return t(map[id]);
+
+}
+
+function renderSections(){
+
+const root=document.getElementById("collectionsRoot");
+
+const order=["mascaras","eyestay","sombras1","sombras2","sombras3","diamond","palettes","sticks","foundation","powders","concealers"];
+
+root.innerHTML=order.map(id=>{
+
+const c=collections[id];
+
+const videoFiles={
+
+mascaras:"01_maquillajes_ojos/01_Coleccion_Mascaras_Pestanas/Moniamori_Mascaras_Samba_Texto.mp4",
+
+eyestay:"01_maquillajes_ojos/02_ Extra_EyeStay/Extra_EyeStay_8_Colores_60s_CORREGIDO.mp4",
+
+sombras1:"01_maquillajes_ojos/03_ Sombra_de_ojos_en_polvo_prensado/Maquillajes_y_Colores_Elegante_Limpio.mp4",
+
+diamond:"01_maquillajes_ojos/04_ Sombra_de_ojos_Diamond_Cream/diamond_cream_tres_tonos_30s.mp4",
+
+palettes:"01_maquillajes_ojos/05_ Paleta_de_sombras_de_ojos_9_Colores/paletas_sombras_video_elegante.mp4",
+
+sticks:"02_maquillajes_rostro/01_Sticks_ Multifuncion/MONIAMORI_VIDEO_COMPATIBLE_IPHONE_45s.mp4",
+
+foundation:"02_maquillajes_rostro/02_Bases_de_Maquillajes/VIDEO_BASES_MAQUILLAJE_60_SEGUNDOS.mp4",
+
+powders:"02_maquillajes_rostro/03_Polvos_Colores_Bronceadores_y_Iluminadores/maquillaje_warm_shade_50s_sin_precio_ni_articulo.mp4",
+
+concealers:"02_maquillajes_rostro/04_Correctores/jumbo_concealer_video_elegante.mp4"
+
+};
+
+const video=videoFiles[id]?`<div class="video-frame"><video controls playsinline preload="metadata"><source src="${ROOT+videoFiles[id].split("/").map(encodeURIComponent).join("/")}" type="video/mp4"></video></div>`:"";
+
+let buttons="";
+
+if(id==="sombras1"){
+
+buttons=`<div class="shadow-buttons">
+
+<button class="btn" onclick="openGallery('sombras1')">${t("shadow1")}</button>
+
+<button class="btn" onclick="openGallery('sombras2')">${t("shadow2")}</button>
+
+<button class="btn" onclick="openGallery('sombras3')">${t("shadow3")}</button>
+
+</div>`;
+
+}else{
+
+buttons=`<div class="action"><button class="btn" onclick="openGallery('${id}')">${t("viewProducts")}</button></div>`;
+
+}
+
+return `<section class="collection">
+
+<h2 class="collection-title">${t(c.titleKey)}</h2>
+
+<p class="collection-subtitle">${collectionSubtitle(id)}</p>
+
+${video}
+
+${buttons}
+
+</section>
+
+<div class="separator"></div>`;
+
+}).join("");
 
 }
 
@@ -1476,25 +1832,21 @@ document.getElementById("galleryInstruction").textContent=t("choose");
 
 const overview=document.getElementById("galleryOverview");
 
+if(collection.overview){
+
 overview.style.display="block";
 
 overview.src=asset(collection.folder,collection.overview);
 
 overview.alt=t(collection.titleKey);
 
-overview.onerror=function(){
+overview.onerror=function(){this.style.display="none"};
 
-this.style.display="none";
+}else{
 
-console.error("No se pudo cargar la imagen:",this.src);
+overview.style.display="none";
 
-};
-
-overview.onload=function(){
-
-this.style.display="block";
-
-};
+}
 
 const grid=document.getElementById("galleryProducts");
 
@@ -1503,6 +1855,8 @@ grid.innerHTML=collection.products.map((product,index)=>{
 const image=asset(collection.folder,product.file);
 
 const name=productName(product);
+
+const price=product.price?`<p>${t("price")}: ${product.price.toFixed(2).replace(".",",")} €</p>`:"";
 
 return `
 
@@ -1514,11 +1868,11 @@ return `
 
 <p>${t("code")}: ${product.code}</p>
 
+${price}
+
 <button type="button" class="detail-btn" onclick="openDetail(${index})">${t("details")}</button>
 
-</article>
-
-`;
+</article>`;
 
 }).join("");
 
@@ -1555,6 +1909,8 @@ document.getElementById("detailTitle").textContent=productName(product);
 document.getElementById("detailImage").src=asset(activeCollection.folder,product.file);
 
 document.getElementById("detailCode").textContent=t("code")+": "+product.code;
+
+document.getElementById("detailPrice").textContent=product.price?t("price")+": "+product.price.toFixed(2).replace(".",",")+" €":"";
 
 document.getElementById("detailDescription").textContent=t("description");
 
@@ -1600,33 +1956,13 @@ el.textContent=t(el.dataset.i18n);
 
 });
 
+renderSections();
+
 if(activeCollection&&document.getElementById("galleryModal").classList.contains("open")){
 
 const id=Object.keys(collections).find(key=>collections[key]===activeCollection);
 
 if(id)openGallery(id);
-
-}
-
-if(document.getElementById("detailModal").classList.contains("open")){
-
-const detailCode=document.getElementById("detailCode").textContent;
-
-const code=detailCode.split(": ").pop();
-
-const product=activeCollection?.products.find(p=>p.code===code);
-
-if(product){
-
-document.getElementById("detailTitle").textContent=productName(product);
-
-document.getElementById("detailCode").textContent=t("code")+": "+product.code;
-
-document.getElementById("detailDescription").textContent=t("description");
-
-document.getElementById("detailWhatsApp").href=whatsappLink(product);
-
-}
 
 }
 
@@ -1649,6 +1985,8 @@ closeGallery();
 }
 
 });
+
+renderSections();
 
 changeLanguage("de");
 
